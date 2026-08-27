@@ -1,0 +1,353 @@
+{
+  "schema_version": 1,
+  "product": "Hoddmimis",
+  "latest": {
+    "version": "0.1.8-beta.1",
+    "build": 9,
+    "tag": "v0.1.8-beta.1-9",
+    "channel": "beta",
+    "assets": [
+      {
+        "platform": "linux",
+        "architecture": "x86_64",
+        "format": "AppImage",
+        "file": "Hoddmimis-0.1.8-beta.1-9-linux-x86_64.AppImage",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.8-beta.1-9/Hoddmimis-0.1.8-beta.1-9-linux-x86_64.AppImage",
+        "bytes": 73308664,
+        "sha256": "094a13015a5977aae667aab1bd71b47124403d3fe76098a1d908efef91961088"
+      },
+      {
+        "platform": "linux",
+        "architecture": "x86_64",
+        "format": "tar.gz",
+        "file": "Hoddmimis-0.1.8-beta.1-9-linux-x86_64.tar.gz",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.8-beta.1-9/Hoddmimis-0.1.8-beta.1-9-linux-x86_64.tar.gz",
+        "bytes": 79196522,
+        "sha256": "ab098a5e90134878047a522d80e8133a2569c216023e57d3ad35294277e330d8"
+      },
+      {
+        "platform": "macos",
+        "architecture": "arm64",
+        "format": "dmg",
+        "file": "Hoddmimis-0.1.8-beta.1-9-macos-arm64.dmg",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.8-beta.1-9/Hoddmimis-0.1.8-beta.1-9-macos-arm64.dmg",
+        "bytes": 93916452,
+        "sha256": "dc2689e38b0b6cbb15e660ff429973ff9a7598bd7387579bfb2e41cd79ca3b34"
+      },
+      {
+        "platform": "linux",
+        "architecture": "x86_64",
+        "format": "rpm",
+        "file": "hoddmimis-0.1.8-beta.1-9.x86_64.rpm",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.8-beta.1-9/hoddmimis-0.1.8-beta.1-9.x86_64.rpm",
+        "bytes": 61898329,
+        "sha256": "abe6c05280a8cc591ba958f764ce732af9f9e2f12ea21c4a2c2958032d23a8da"
+      },
+      {
+        "platform": "linux",
+        "architecture": "x86_64",
+        "format": "deb",
+        "file": "hoddmimis_0.1.8-beta.1-9_amd64.deb",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.8-beta.1-9/hoddmimis_0.1.8-beta.1-9_amd64.deb",
+        "bytes": 56708300,
+        "sha256": "e28fa4cebad74233aa4312c0a7564f833f0fda399849a1137b22ebf244841e49"
+      }
+    ],
+    "notes": [
+      "Linux zombie processes such as unreaped Git children now keep their real process names instead of appearing as extra instances of the containing desktop application.",
+      "Linux now has an application menu for snapshot import and export, Preferences, update checks, About with the installed version, and Quit. macOS gains the same snapshot commands in its native menu bar."
+    ]
+  },
+  "releases": [
+    {
+      "version": "0.1.8-beta.1",
+      "build": 9,
+      "tag": "v0.1.8-beta.1-9",
+      "channel": "beta",
+      "assets": [
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "AppImage",
+          "file": "Hoddmimis-0.1.8-beta.1-9-linux-x86_64.AppImage",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.8-beta.1-9/Hoddmimis-0.1.8-beta.1-9-linux-x86_64.AppImage",
+          "bytes": 73308664,
+          "sha256": "094a13015a5977aae667aab1bd71b47124403d3fe76098a1d908efef91961088"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "tar.gz",
+          "file": "Hoddmimis-0.1.8-beta.1-9-linux-x86_64.tar.gz",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.8-beta.1-9/Hoddmimis-0.1.8-beta.1-9-linux-x86_64.tar.gz",
+          "bytes": 79196522,
+          "sha256": "ab098a5e90134878047a522d80e8133a2569c216023e57d3ad35294277e330d8"
+        },
+        {
+          "platform": "macos",
+          "architecture": "arm64",
+          "format": "dmg",
+          "file": "Hoddmimis-0.1.8-beta.1-9-macos-arm64.dmg",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.8-beta.1-9/Hoddmimis-0.1.8-beta.1-9-macos-arm64.dmg",
+          "bytes": 93916452,
+          "sha256": "dc2689e38b0b6cbb15e660ff429973ff9a7598bd7387579bfb2e41cd79ca3b34"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "rpm",
+          "file": "hoddmimis-0.1.8-beta.1-9.x86_64.rpm",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.8-beta.1-9/hoddmimis-0.1.8-beta.1-9.x86_64.rpm",
+          "bytes": 61898329,
+          "sha256": "abe6c05280a8cc591ba958f764ce732af9f9e2f12ea21c4a2c2958032d23a8da"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "deb",
+          "file": "hoddmimis_0.1.8-beta.1-9_amd64.deb",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.8-beta.1-9/hoddmimis_0.1.8-beta.1-9_amd64.deb",
+          "bytes": 56708300,
+          "sha256": "e28fa4cebad74233aa4312c0a7564f833f0fda399849a1137b22ebf244841e49"
+        }
+      ],
+      "notes": [
+        "Linux zombie processes such as unreaped Git children now keep their real process names instead of appearing as extra instances of the containing desktop application.",
+        "Linux now has an application menu for snapshot import and export, Preferences, update checks, About with the installed version, and Quit. macOS gains the same snapshot commands in its native menu bar."
+      ]
+    },
+    {
+      "version": "0.1.7-beta.1",
+      "build": 8,
+      "tag": "v0.1.7-beta.1-8",
+      "channel": "beta",
+      "assets": [
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "AppImage",
+          "file": "Hoddmimis-0.1.7-beta.1-8-linux-x86_64.AppImage",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.7-beta.1-8/Hoddmimis-0.1.7-beta.1-8-linux-x86_64.AppImage",
+          "bytes": 73304568,
+          "sha256": "6e1cdbe164cbda1cbfe47d14abb9672487657f0e61331dae4903c9ce479b4053"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "tar.gz",
+          "file": "Hoddmimis-0.1.7-beta.1-8-linux-x86_64.tar.gz",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.7-beta.1-8/Hoddmimis-0.1.7-beta.1-8-linux-x86_64.tar.gz",
+          "bytes": 79195067,
+          "sha256": "7e1d18caa706bda462b12fa0a32db5c68075592dfaa5979d2c3208fa03db6e89"
+        },
+        {
+          "platform": "macos",
+          "architecture": "arm64",
+          "format": "dmg",
+          "file": "Hoddmimis-0.1.7-beta.1-8-macos-arm64.dmg",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.7-beta.1-8/Hoddmimis-0.1.7-beta.1-8-macos-arm64.dmg",
+          "bytes": 93915558,
+          "sha256": "57aea9b7727de3b2520047ae4e075addb48aead6818db5e3bc8f3b60fa24e8ba"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "rpm",
+          "file": "hoddmimis-0.1.7-beta.1-8.x86_64.rpm",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.7-beta.1-8/hoddmimis-0.1.7-beta.1-8.x86_64.rpm",
+          "bytes": 61891354,
+          "sha256": "15dc532027944b55317d1e99df750a6d03744f55f9a69e63ee702b8dad980fa4"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "deb",
+          "file": "hoddmimis_0.1.7-beta.1-8_amd64.deb",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.7-beta.1-8/hoddmimis_0.1.7-beta.1-8_amd64.deb",
+          "bytes": 56716920,
+          "sha256": "588cabe3d087e86efa539f0740f1b9d167443b1fa19f6da4b50fafb015c28080"
+        }
+      ],
+      "notes": [
+        "Bubblewrap ancestors of Flatpak applications such as Bitwarden now show the owning application's name and icon when their identities match exactly.",
+        "The macOS disk image now includes an Applications link. Pin outlines and active-tab underlines no longer flicker while resizing on scaled Linux displays. German aggregate metrics now use compact labels such as \"CPU gesamt\" and \"RSS gesamt\"."
+      ]
+    },
+    {
+      "version": "0.1.6-beta.1",
+      "build": 7,
+      "tag": "v0.1.6-beta.1-7",
+      "channel": "beta",
+      "assets": [
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "AppImage",
+          "file": "Hoddmimis-0.1.6-beta.1-7-linux-x86_64.AppImage",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.6-beta.1-7/Hoddmimis-0.1.6-beta.1-7-linux-x86_64.AppImage",
+          "bytes": 73304568,
+          "sha256": "ceeab25a5617fe0bf8baad8d4c6d35ecbb4630624f6f6e9994d1e81a116a56c2"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "tar.gz",
+          "file": "Hoddmimis-0.1.6-beta.1-7-linux-x86_64.tar.gz",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.6-beta.1-7/Hoddmimis-0.1.6-beta.1-7-linux-x86_64.tar.gz",
+          "bytes": 79196255,
+          "sha256": "da4d9a4f29295b91e06278463cdb4f94c26e011bd9d11f95cd3e631dd15376f5"
+        },
+        {
+          "platform": "macos",
+          "architecture": "arm64",
+          "format": "dmg",
+          "file": "Hoddmimis-0.1.6-beta.1-7-macos-arm64.dmg",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.6-beta.1-7/Hoddmimis-0.1.6-beta.1-7-macos-arm64.dmg",
+          "bytes": 91617928,
+          "sha256": "84729931c88554d3f0f2664c1b0fe1734a2cba2e943e072d92913b679674bd06"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "rpm",
+          "file": "hoddmimis-0.1.6-beta.1-7.x86_64.rpm",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.6-beta.1-7/hoddmimis-0.1.6-beta.1-7.x86_64.rpm",
+          "bytes": 61892175,
+          "sha256": "ccd6604bc9d52ae9ca5abd8890e831c21770ff9ada4ed67fde372598afe4c547"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "deb",
+          "file": "hoddmimis_0.1.6-beta.1-7_amd64.deb",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.6-beta.1-7/hoddmimis_0.1.6-beta.1-7_amd64.deb",
+          "bytes": 56724216,
+          "sha256": "1569ea35d906f2b18963d613ae6a074aee321719a6ecdc079d500aa501dabf2d"
+        }
+      ],
+      "notes": [
+        "Bitwarden and other Flatpak applications with renamed desktop IDs now show their installed application name and icon.",
+        "Populate the inspector from the process tree's initial selection when the application starts."
+      ]
+    },
+    {
+      "version": "0.1.5-beta.1",
+      "build": 6,
+      "tag": "v0.1.5-beta.1-6",
+      "channel": "beta",
+      "assets": [
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "AppImage",
+          "file": "Hoddmimis-0.1.5-beta.1-6-linux-x86_64.AppImage",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.5-beta.1-6/Hoddmimis-0.1.5-beta.1-6-linux-x86_64.AppImage",
+          "bytes": 73304568,
+          "sha256": "1dba7e3b04b4d3b6b2d0fff2bf5bc3493045f05ea6019a7801811f0ac47d8942"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "tar.gz",
+          "file": "Hoddmimis-0.1.5-beta.1-6-linux-x86_64.tar.gz",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.5-beta.1-6/Hoddmimis-0.1.5-beta.1-6-linux-x86_64.tar.gz",
+          "bytes": 79198350,
+          "sha256": "675fdce3f1adc63e24e0806bd88e19b27ad9d2cc8d7feb1791277a1946ba1b08"
+        },
+        {
+          "platform": "macos",
+          "architecture": "arm64",
+          "format": "dmg",
+          "file": "Hoddmimis-0.1.5-beta.1-6-macos-arm64.dmg",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.5-beta.1-6/Hoddmimis-0.1.5-beta.1-6-macos-arm64.dmg",
+          "bytes": 93863404,
+          "sha256": "485fc4598ebdec30a7c35279f12bc0df01a1727e21bd2a1f8e6e23b1a1e7de82"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "rpm",
+          "file": "hoddmimis-0.1.5-beta.1-6.x86_64.rpm",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.5-beta.1-6/hoddmimis-0.1.5-beta.1-6.x86_64.rpm",
+          "bytes": 61892728,
+          "sha256": "433961dd82928e9250e1e44d5e73eb1e18d4ffea3ef5661f0abd30e3a9263c12"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "deb",
+          "file": "hoddmimis_0.1.5-beta.1-6_amd64.deb",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.5-beta.1-6/hoddmimis_0.1.5-beta.1-6_amd64.deb",
+          "bytes": 56720392,
+          "sha256": "fcf5f6bf16959e075d65bdef5e96f1dd44531002a4d84b98066513b4efe2489b"
+        }
+      ],
+      "notes": [
+        "The header is now a compact operational toolbar. It removes the repeated app icon and title, gives the process filter the available width, and leaves more room for the process tree.",
+        "Linux shell-wrapper processes now resolve the launched application's full name and icon, including Brave Browser's stable launcher.",
+        "Inspector graphs now align their scale ticks with the labels and match the baseline thickness. Inspector subsections and lifetime network totals stay hidden when the backend does not support them."
+      ]
+    },
+    {
+      "version": "0.1.4-beta.1",
+      "build": 5,
+      "tag": "v0.1.4-beta.1-5",
+      "channel": "beta",
+      "assets": [
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "AppImage",
+          "file": "Hoddmimis-0.1.4-beta.1-5-linux-x86_64.AppImage",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.4-beta.1-5/Hoddmimis-0.1.4-beta.1-5-linux-x86_64.AppImage",
+          "bytes": 73312760,
+          "sha256": "7535191561de5c0e966542757565bc6f7a7b5fad24276ee02b3d36380ebaae85"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "tar.gz",
+          "file": "Hoddmimis-0.1.4-beta.1-5-linux-x86_64.tar.gz",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.4-beta.1-5/Hoddmimis-0.1.4-beta.1-5-linux-x86_64.tar.gz",
+          "bytes": 79198998,
+          "sha256": "2711ae191f48c6b395ecf38da223c6270e5a75f3ed6c470dee12d703feaa2c75"
+        },
+        {
+          "platform": "macos",
+          "architecture": "arm64",
+          "format": "dmg",
+          "file": "Hoddmimis-0.1.4-beta.1-5-macos-arm64.dmg",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.4-beta.1-5/Hoddmimis-0.1.4-beta.1-5-macos-arm64.dmg",
+          "bytes": 93863434,
+          "sha256": "97397e84e89399eccc4d1fa51d88b3083803094e7458793c79f89373d6040600"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "rpm",
+          "file": "hoddmimis-0.1.4-beta.1-5.x86_64.rpm",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.4-beta.1-5/hoddmimis-0.1.4-beta.1-5.x86_64.rpm",
+          "bytes": 61903939,
+          "sha256": "4df82323d7fe3b3b65ea3c4efc8bb12e8ab2e524591417df6b958beefe68d268"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "deb",
+          "file": "hoddmimis_0.1.4-beta.1-5_amd64.deb",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.4-beta.1-5/hoddmimis_0.1.4-beta.1-5_amd64.deb",
+          "bytes": 56717144,
+          "sha256": "c07913d0791dfd3554d8470d8a9fee666abfb0990e2d9adc82bf7d4901f44d63"
+        }
+      ],
+      "notes": [
+        "The inspector now slides in and out, and its pages animate as you switch tabs. Reduce motion disables these transitions.",
+        "Inline process history and pin markers now line up across the process table. Expanding or collapsing a process also rotates its disclosure chevron.",
+        "Inspector history charts now include clearer scale ticks. Standard charts show a midpoint; the diverging network chart labels only its top and bottom scales.",
+        "Freeze now holds the visible process order as well as the structure, then applies the latest live sort when you resume.",
+        "Press Enter or Return in the snapshot-name field to save, matching the Save button.",
+        "Aggregate CPU and GPU values have more room in the process table, avoiding ellipses for high multi-core usage."
+      ]
+    }
+  ]
+}

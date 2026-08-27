@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Releases · Hoddmimis</title>
+    <meta name="description" content="Linux and macOS downloads, release notes, sizes, and checksums for Hoddmimis.">
+    <meta name="theme-color" content="#16181d" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="assets/brand/hoddmimis-icon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <nav aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Hoddmimis home"><img class="brand-mark" src="assets/brand/hoddmimis-icon.svg" alt="" width="32" height="32"><span>Hoddmimis</span></a>
+        <div class="nav-links"><a href="index.html#features">Features</a><a href="index.html#architecture">Implementation</a><a aria-current="page" href="releases.html">Releases</a></div>
+      </nav>
+    </header>
+    <main id="main-content" class="release-page" tabindex="-1">
+      <p class="section-label">Releases</p>
+      <h1 data-release-heading aria-live="polite">Hoddmimis releases</h1>
+      <p class="lede" data-release-intro>Loading the current Linux and macOS release information.</p>
+      <section class="release-status" aria-labelledby="current-status" data-release-status>
+        <h2 id="current-status">Current development status</h2>
+        <dl data-development-status>
+          <dt>Linux</dt><dd>AppImage, DEB, RPM, and portable archive releases are supported.</dd>
+          <dt>macOS</dt><dd>The current release target is Apple Silicon.</dd>
+          <dt>Release list</dt><dd>The current signed release information could not be loaded.</dd>
+        </dl>
+        <div class="release-history" data-release-history hidden></div>
+        <p class="manifest-error" data-manifest-error role="status" hidden>The release list could not be loaded.</p>
+      </section>
+    </main>
+    <footer><span>Hoddmimis</span><span>Release files list their platform, size, and SHA-256 checksum.</span></footer>
+    <script src="releases.js" defer></script>
+  </body>
+</html>

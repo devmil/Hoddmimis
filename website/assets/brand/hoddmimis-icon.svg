@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Hoddmimis app icon</title>
+  <desc id="desc">A branching process tree forming an H inside a blue and green glass tile.</desc>
+  <defs>
+    <linearGradient id="plate" x1="178" y1="142" x2="846" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4f86ff"/>
+      <stop offset="0.48" stop-color="#2455b8"/>
+      <stop offset="1" stop-color="#10264f"/>
+    </linearGradient>
+    <radialGradient id="forest" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(770 770) rotate(-132) scale(600 520)">
+      <stop offset="0" stop-color="#2fd18b" stop-opacity="0.82"/>
+      <stop offset="0.55" stop-color="#1b9b7b" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#1b9b7b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="branch" x1="294" y1="270" x2="730" y2="770" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f5fbff"/>
+      <stop offset="0.52" stop-color="#dcecff"/>
+      <stop offset="1" stop-color="#bdeedc"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff0ad"/>
+      <stop offset="1" stop-color="#f3ad36"/>
+    </linearGradient>
+    <clipPath id="tile"><rect x="112" y="112" width="800" height="800" rx="184"/></clipPath>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#07162d" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+  <rect x="112" y="112" width="800" height="800" rx="184" fill="#07162d" opacity="0.28" filter="url(#shadow)"/>
+  <g clip-path="url(#tile)">
+    <rect x="112" y="112" width="800" height="800" fill="url(#plate)"/>
+    <rect x="112" y="112" width="800" height="800" fill="url(#forest)"/>
+    <path d="M112 112h800v218c-128 42-226 13-314-39-94-56-190-100-284-78-68 16-132 48-202 91z" fill="#fff" opacity="0.13"/>
+  </g>
+  <rect x="126" y="126" width="772" height="772" rx="170" fill="none" stroke="#fff" stroke-opacity="0.55" stroke-width="24"/>
+  <rect x="156" y="156" width="712" height="712" rx="145" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="7"/>
+  <g filter="url(#shadow)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M326 730V294M698 730V294M326 512H698M326 376L246 300M698 376L778 300M326 646L246 724M698 646L778 724" stroke="#07162d" stroke-opacity="0.5" stroke-width="116"/>
+    <path d="M326 730V294M698 730V294M326 512H698M326 376L246 300M698 376L778 300M326 646L246 724M698 646L778 724" stroke="url(#branch)" stroke-width="72"/>
+    <path d="M326 730V294M698 730V294M326 512H698" stroke="#fff" stroke-opacity="0.35" stroke-width="14"/>
+  </g>
+  <g fill="url(#node)" stroke="#12356d" stroke-width="16">
+    <circle cx="246" cy="300" r="42"/><circle cx="778" cy="300" r="42"/>
+    <circle cx="512" cy="512" r="50"/><circle cx="246" cy="724" r="42"/>
+    <circle cx="778" cy="724" r="42"/>
+  </g>
+  <g fill="#fff" opacity="0.72">
+    <circle cx="233" cy="287" r="11"/><circle cx="765" cy="287" r="11"/>
+    <circle cx="497" cy="497" r="13"/><circle cx="233" cy="711" r="11"/>
+    <circle cx="765" cy="711" r="11"/>
+  </g>
+  <path d="M207 213c-34 42-49 88-52 132" fill="none" stroke="#fff" stroke-opacity="0.66" stroke-width="15" stroke-linecap="round"/>
+</svg>

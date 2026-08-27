@@ -1,0 +1,179 @@
+:root {
+  color-scheme: light dark;
+  --page: #e9ebef;
+  --surface: #ffffff;
+  --panel: #ffffff;
+  --header: #fafafb;
+  --field: #f1f2f5;
+  --selection: #eaf0fd;
+  --text: #191c22;
+  --muted: #4a505c;
+  --faint: #8b919e;
+  --accent: #4c82fb;
+  --live: #34c77b;
+  --line: rgba(25, 28, 34, 0.12);
+  --shadow: rgba(25, 28, 34, 0.16);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #0d0f13;
+    --surface: #16181d;
+    --panel: #15171c;
+    --header: #181a1f;
+    --field: #1f2229;
+    --selection: #1d273d;
+    --text: #e7e9ee;
+    --muted: #9aa1ad;
+    --faint: #646b78;
+    --line: rgba(231, 233, 238, 0.11);
+    --shadow: rgba(0, 0, 0, 0.38);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font-family: Inter, Geist, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+a { color: inherit; }
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 20;
+  padding: 10px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(calc(-100% - 16px));
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--page) 86%, transparent);
+  backdrop-filter: blur(18px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 22px;
+}
+
+.brand, .nav-links { display: flex; align-items: center; gap: 12px; }
+.brand { font-weight: 750; text-decoration: none; }
+.brand-mark {
+  border-radius: 8px;
+  display: block;
+}
+.brand-mark { width: 32px; height: 32px; }
+.nav-links a { color: var(--muted); font-size: 14px; text-decoration: none; }
+.nav-links a:hover, .nav-links a:focus-visible { color: var(--text); }
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.84fr) minmax(520px, 1.16fr);
+  gap: 52px;
+  align-items: center;
+  max-width: 1180px;
+  min-height: 680px;
+  margin: 0 auto;
+  padding: 72px 22px 84px;
+}
+
+.eyebrow, .section-label {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+h1 { max-width: 720px; margin-bottom: 22px; font-size: clamp(44px, 6vw, 64px); line-height: 1; letter-spacing: -0.04em; }
+h2 { max-width: 760px; font-size: clamp(30px, 4vw, 42px); line-height: 1.1; letter-spacing: -0.025em; }
+h3 { margin-bottom: 10px; font-size: 18px; }
+.lede { max-width: 660px; color: var(--muted); font-size: 19px; }
+.development-note { margin-top: 18px; color: var(--faint); font-size: 13px; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.button { border: 1px solid var(--line); border-radius: 8px; padding: 11px 17px; font-weight: 700; text-decoration: none; }
+.button.primary { border-color: var(--accent); background: var(--accent); color: #fff; }
+.button.secondary { background: var(--surface); }
+.button:focus-visible, a:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: 3px; }
+
+.app-shot { overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); box-shadow: 0 24px 60px var(--shadow); }
+.app-shot img { display: block; width: 100%; height: auto; }
+.app-shot figcaption { border-top: 1px solid var(--line); padding: 9px 12px; color: var(--faint); font-size: 12px; }
+
+.band, .release-page { max-width: 1180px; margin: 0 auto; padding: 84px 22px; }
+.feature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 34px; }
+.feature-grid article { min-height: 170px; border: 1px solid var(--line); border-radius: 10px; padding: 24px; background: var(--surface); }
+.feature-grid p, .architecture p { color: var(--muted); }
+.architecture { max-width: 820px; }
+.architecture p:last-child { max-width: 760px; }
+
+.release-page { min-height: calc(100vh - 140px); }
+.release-page h1 { font-size: clamp(42px, 6vw, 70px); }
+.release-status { max-width: 780px; margin-top: 54px; border-top: 1px solid var(--line); padding-top: 30px; }
+.release-status dl { display: grid; grid-template-columns: 140px 1fr; gap: 16px 22px; }
+.release-status dt { color: var(--faint); font-size: 13px; font-weight: 700; }
+.release-status dd { margin: 0; color: var(--muted); }
+.release-history { display: grid; gap: 42px; margin-top: 28px; }
+.release-entry + .release-entry { border-top: 1px solid var(--line); padding-top: 34px; }
+.release-entry h2 { margin: 0; font-size: 25px; }
+.release-channel { margin: 6px 0 0; color: var(--faint); font-size: 13px; text-transform: capitalize; }
+.release-assets { display: grid; gap: 12px; margin-top: 22px; }
+.release-notes { margin-top: 32px; border-top: 1px solid var(--line); padding-top: 24px; }
+.release-notes h3 { margin-top: 0; }
+.release-notes li + li { margin-top: 10px; }
+.release-asset { display: grid; grid-template-columns: 1fr auto; gap: 5px 20px; border: 1px solid var(--line); border-radius: 9px; padding: 16px; background: var(--surface); }
+.release-asset a { color: var(--text); font-weight: 720; }
+.release-asset span, .release-asset code { color: var(--muted); font-size: 12px; }
+.release-asset code { grid-column: 1 / -1; overflow-wrap: anywhere; }
+.manifest-error { color: var(--muted); }
+
+footer { display: flex; justify-content: space-between; gap: 24px; max-width: 1180px; margin: 0 auto; border-top: 1px solid var(--line); padding: 28px 22px 40px; color: var(--faint); font-size: 13px; }
+
+@media (max-width: 920px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+}
+
+@media (max-width: 620px) {
+  .nav-links a:not([aria-current="page"]) { display: none; }
+  .hero, .band, .release-page { padding-left: 16px; padding-right: 16px; }
+  .hero { padding-top: 52px; }
+  h1 { font-size: 46px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .release-status dl { grid-template-columns: 1fr; gap: 5px; }
+  .release-status dd { margin-bottom: 14px; }
+  .release-asset { grid-template-columns: 1fr; }
+  footer { flex-direction: column; padding-left: 16px; padding-right: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
