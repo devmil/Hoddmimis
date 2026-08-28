@@ -19,16 +19,16 @@ function platformLabel(asset) {
   return `${platform} ${architecture}`;
 }
 
-function formatMark(format) {
-  const marks = {
-    AppImage: "APP",
-    "tar.gz": "TGZ",
-    "pkg.tar.zst": "PKG",
-    dmg: "DMG",
-    rpm: "RPM",
-    deb: "DEB",
+function formatIcon(format) {
+  const icons = {
+    AppImage: "appimage",
+    "tar.gz": "archive",
+    "pkg.tar.zst": "package",
+    dmg: "disk",
+    rpm: "rpm",
+    deb: "deb",
   };
-  return marks[format] || format.slice(0, 3).toUpperCase();
+  return icons[format] || "package";
 }
 
 function installationLabel(format) {
@@ -47,12 +47,15 @@ function createAsset(asset) {
   const article = document.createElement("article");
   article.className = "release-asset";
   const icon = document.createElement("span");
-  icon.className = "release-asset-icon";
+  const iconName = formatIcon(asset.format);
+  icon.className = `release-asset-icon release-asset-icon--${iconName}`;
   icon.setAttribute("aria-hidden", "true");
-  const mark = document.createElement("span");
-  mark.className = "release-format-mark";
-  mark.textContent = formatMark(asset.format);
-  icon.append(mark);
+  const graphic = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  graphic.setAttribute("viewBox", "0 0 32 32");
+  const symbol = document.createElementNS("http://www.w3.org/2000/svg", "use");
+  symbol.setAttribute("href", `#release-icon-${iconName}`);
+  graphic.append(symbol);
+  icon.append(graphic);
   const download = document.createElement("div");
   download.className = "release-asset-download";
   const link = document.createElement("a");

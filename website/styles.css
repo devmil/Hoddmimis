@@ -13,6 +13,12 @@
   --live: #34c77b;
   --line: rgba(25, 28, 34, 0.12);
   --shadow: rgba(25, 28, 34, 0.16);
+  --format-appimage: #26866b;
+  --format-archive: #b97819;
+  --format-package: #347eae;
+  --format-disk: #7168c9;
+  --format-rpm: #b95358;
+  --format-deb: #a84678;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +34,12 @@
     --faint: #646b78;
     --line: rgba(231, 233, 238, 0.11);
     --shadow: rgba(0, 0, 0, 0.38);
+    --format-appimage: #38a985;
+    --format-archive: #cf9239;
+    --format-package: #479bcf;
+    --format-disk: #8980e2;
+    --format-rpm: #cf686d;
+    --format-deb: #c15a8d;
   }
 }
 
@@ -152,13 +164,18 @@ h3 { margin-bottom: 10px; font-size: 18px; }
 .release-notes h3 { margin-top: 0; }
 .release-notes li + li { margin-top: 10px; }
 .release-asset { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 8px 14px; align-items: center; border: 1px solid var(--line); border-radius: 9px; padding: 16px; background: var(--surface); }
-.release-asset-icon { position: relative; display: flex; align-items: flex-end; justify-content: center; width: 36px; height: 44px; border: 1.5px solid var(--muted); border-radius: 4px; padding-bottom: 7px; color: var(--text); }
-.release-asset-icon::before { position: absolute; top: -2px; right: -2px; width: 12px; height: 12px; border-bottom: 1.5px solid var(--muted); border-left: 1.5px solid var(--muted); border-radius: 0 3px 0 3px; background: var(--surface); content: ""; }
-.release-format-mark { font-size: 9px; font-weight: 800; letter-spacing: 0.04em; line-height: 1; }
+.release-icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.release-asset-icon { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid color-mix(in srgb, currentColor 58%, transparent); border-radius: 11px; background: color-mix(in srgb, currentColor 13%, var(--surface)); color: var(--format-package); }
+.release-asset-icon svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.release-asset .release-asset-icon--appimage { border-radius: 12px; color: var(--format-appimage); }
+.release-asset .release-asset-icon--archive { border-radius: 9px; color: var(--format-archive); }
+.release-asset .release-asset-icon--package { clip-path: polygon(50% 0, 94% 23%, 94% 77%, 50% 100%, 6% 77%, 6% 23%); color: var(--format-package); }
+.release-asset .release-asset-icon--disk { border-radius: 50%; color: var(--format-disk); }
+.release-asset .release-asset-icon--rpm { border-radius: 15px 8px; color: var(--format-rpm); }
+.release-asset .release-asset-icon--deb { border-radius: 8px 15px; color: var(--format-deb); }
 .release-asset-download { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: baseline; min-width: 0; }
 .release-asset a { color: var(--text); font-weight: 720; }
 .release-asset span, .release-asset code { color: var(--muted); font-size: 12px; }
-.release-asset .release-format-mark { color: var(--text); font-size: 9px; }
 .release-asset code { grid-column: 2; overflow-wrap: anywhere; }
 .manifest-error { color: var(--muted); }
 
