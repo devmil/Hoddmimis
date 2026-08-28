@@ -19,17 +19,55 @@ function platformLabel(asset) {
   return `${platform} ${architecture}`;
 }
 
+function formatMark(format) {
+  const marks = {
+    AppImage: "APP",
+    "tar.gz": "TGZ",
+    "pkg.tar.zst": "PKG",
+    dmg: "DMG",
+    rpm: "RPM",
+    deb: "DEB",
+  };
+  return marks[format] || format.slice(0, 3).toUpperCase();
+}
+
+function installationLabel(format) {
+  const labels = {
+    AppImage: "Standalone",
+    "tar.gz": "Portable archive",
+    "pkg.tar.zst": "pacman",
+    dmg: "macOS disk image",
+    rpm: "DNF / Zypper",
+    deb: "APT",
+  };
+  return labels[format] || "Package";
+}
+
 function createAsset(asset) {
   const article = document.createElement("article");
   article.className = "release-asset";
+  const icon = document.createElement("span");
+  icon.className = "release-asset-icon";
+  icon.setAttribute("aria-hidden", "true");
+  const mark = document.createElement("span");
+  mark.className = "release-format-mark";
+  mark.textContent = formatMark(asset.format);
+  icon.append(mark);
+  const download = document.createElement("div");
+  download.className = "release-asset-download";
   const link = document.createElement("a");
   link.href = asset.url;
   link.textContent = platformLabel(asset);
+  link.setAttribute(
+    "aria-label",
+    `Download Hoddmimis for ${platformLabel(asset)} as ${asset.format}, ${installationLabel(asset.format)}`,
+  );
   const size = document.createElement("span");
-  size.textContent = `${asset.format} · ${formatBytes(asset.bytes)}`;
+  size.textContent = `${asset.format} · ${installationLabel(asset.format)} · ${formatBytes(asset.bytes)}`;
+  download.append(link, size);
   const checksum = document.createElement("code");
   checksum.textContent = `SHA-256 ${asset.sha256}`;
-  article.append(link, size, checksum);
+  article.append(icon, download, checksum);
   return article;
 }
 
