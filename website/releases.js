@@ -75,12 +75,15 @@ function createAsset(asset) {
   icon.setAttribute("aria-hidden", "true");
   const brands = formatBrands(asset.format);
   if (brands.length > 0) {
-    icon.classList.toggle("release-asset-icon--paired", brands.length > 1);
-    icon.classList.add(`release-asset-icon--brands-${brands.length}`);
+    icon.classList.add("release-asset-icon--brands");
+    article.classList.toggle("release-asset--multi-brand", brands.length > 1);
     for (const brand of brands) {
+      const badge = document.createElement("span");
+      badge.className = `release-brand-badge release-brand-badge--${brand}`;
       const logo = document.createElement("span");
       logo.className = `release-brand-logo release-brand-logo--${brand}`;
-      icon.append(logo);
+      badge.append(logo);
+      icon.append(badge);
     }
   } else {
     const graphic = document.createElementNS("http://www.w3.org/2000/svg", "svg");
