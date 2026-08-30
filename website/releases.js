@@ -23,12 +23,23 @@ function formatIcon(format) {
   const icons = {
     AppImage: "appimage",
     "tar.gz": "archive",
-    "pkg.tar.zst": "package",
-    dmg: "disk",
+    "pkg.tar.zst": "archlinux",
+    dmg: "apple",
     rpm: "rpm",
     deb: "deb",
   };
   return icons[format] || "package";
+}
+
+function formatBrands(format) {
+  const brands = {
+    AppImage: ["linux"],
+    "pkg.tar.zst": ["archlinux"],
+    dmg: ["apple"],
+    rpm: ["fedora", "redhat", "suse"],
+    deb: ["debian", "ubuntu"],
+  };
+  return brands[format] || [];
 }
 
 function installationLabel(format) {
@@ -43,6 +54,18 @@ function installationLabel(format) {
   return labels[format] || "Package";
 }
 
+function distributionLabel(format) {
+  const labels = {
+    AppImage: "Runs on most x86_64 Linux distributions",
+    "tar.gz": "Portable Linux archive",
+    "pkg.tar.zst": "Common on Arch Linux, Manjaro, EndeavourOS, and Omarchy",
+    dmg: "For Apple silicon macOS",
+    rpm: "Common on Fedora, Red Hat Enterprise Linux, openSUSE, Rocky Linux, AlmaLinux, and CentOS Stream",
+    deb: "Common on Debian, Ubuntu, Linux Mint, and Pop!_OS",
+  };
+  return labels[format] || "Linux";
+}
+
 function createAsset(asset) {
   const article = document.createElement("article");
   article.className = "release-asset";
@@ -50,12 +73,23 @@ function createAsset(asset) {
   const iconName = formatIcon(asset.format);
   icon.className = `release-asset-icon release-asset-icon--${iconName}`;
   icon.setAttribute("aria-hidden", "true");
-  const graphic = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  graphic.setAttribute("viewBox", "0 0 32 32");
-  const symbol = document.createElementNS("http://www.w3.org/2000/svg", "use");
-  symbol.setAttribute("href", `#release-icon-${iconName}`);
-  graphic.append(symbol);
-  icon.append(graphic);
+  const brands = formatBrands(asset.format);
+  if (brands.length > 0) {
+    icon.classList.toggle("release-asset-icon--paired", brands.length > 1);
+    icon.classList.add(`release-asset-icon--brands-${brands.length}`);
+    for (const brand of brands) {
+      const logo = document.createElement("span");
+      logo.className = `release-brand-logo release-brand-logo--${brand}`;
+      icon.append(logo);
+    }
+  } else {
+    const graphic = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    graphic.setAttribute("viewBox", "0 0 32 32");
+    const symbol = document.createElementNS("http://www.w3.org/2000/svg", "use");
+    symbol.setAttribute("href", `#release-icon-${iconName}`);
+    graphic.append(symbol);
+    icon.append(graphic);
+  }
   const download = document.createElement("div");
   download.className = "release-asset-download";
   const link = document.createElement("a");
@@ -67,7 +101,10 @@ function createAsset(asset) {
   );
   const size = document.createElement("span");
   size.textContent = `${asset.format} · ${installationLabel(asset.format)} · ${formatBytes(asset.bytes)}`;
-  download.append(link, size);
+  const compatibility = document.createElement("span");
+  compatibility.className = "release-asset-compatibility";
+  compatibility.textContent = distributionLabel(asset.format);
+  download.append(link, size, compatibility);
   const checksum = document.createElement("code");
   checksum.textContent = `SHA-256 ${asset.sha256}`;
   article.append(icon, download, checksum);

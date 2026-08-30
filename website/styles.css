@@ -13,12 +13,20 @@
   --live: #34c77b;
   --line: rgba(25, 28, 34, 0.12);
   --shadow: rgba(25, 28, 34, 0.16);
-  --format-appimage: #26866b;
+  --format-appimage: #b47f00;
   --format-archive: #b97819;
-  --format-package: #347eae;
-  --format-disk: #7168c9;
-  --format-rpm: #b95358;
-  --format-deb: #a84678;
+  --format-package: #1793d1;
+  --format-disk: #555861;
+  --format-rpm: #3e8fc6;
+  --format-deb: #a81d33;
+  --brand-linux: #b47f00;
+  --brand-apple: #282b31;
+  --brand-archlinux: #1793d1;
+  --brand-redhat: #d50000;
+  --brand-suse: #0c322c;
+  --brand-fedora: #3e8fc6;
+  --brand-debian: #a81d33;
+  --brand-ubuntu: #e95420;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,12 +42,20 @@
     --faint: #646b78;
     --line: rgba(231, 233, 238, 0.11);
     --shadow: rgba(0, 0, 0, 0.38);
-    --format-appimage: #38a985;
+    --format-appimage: #fcc624;
     --format-archive: #cf9239;
-    --format-package: #479bcf;
-    --format-disk: #8980e2;
-    --format-rpm: #cf686d;
-    --format-deb: #c15a8d;
+    --format-package: #3daee9;
+    --format-disk: #b7bcc7;
+    --format-rpm: #51a2da;
+    --format-deb: #d84b62;
+    --brand-linux: #fcc624;
+    --brand-apple: #e7e9ee;
+    --brand-archlinux: #3daee9;
+    --brand-redhat: #ff4545;
+    --brand-suse: #30ba78;
+    --brand-fedora: #51a2da;
+    --brand-debian: #d84b62;
+    --brand-ubuntu: #f26b38;
   }
 }
 
@@ -167,13 +183,27 @@ h3 { margin-bottom: 10px; font-size: 18px; }
 .release-icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 .release-asset-icon { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid color-mix(in srgb, currentColor 58%, transparent); border-radius: 11px; background: color-mix(in srgb, currentColor 13%, var(--surface)); color: var(--format-package); }
 .release-asset-icon svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.release-brand-logo { width: 28px; height: 28px; background: currentColor; mask-position: center; mask-repeat: no-repeat; mask-size: contain; }
+.release-asset .release-brand-logo--linux { color: var(--brand-linux); mask-image: url("assets/formats/simple-icons/linux.svg"); }
+.release-asset .release-brand-logo--apple { color: var(--brand-apple); mask-image: url("assets/formats/simple-icons/apple.svg"); }
+.release-asset .release-brand-logo--archlinux { color: var(--brand-archlinux); mask-image: url("assets/formats/simple-icons/archlinux.svg"); }
+.release-asset .release-brand-logo--redhat { color: var(--brand-redhat); mask-image: url("assets/formats/simple-icons/redhat.svg"); }
+.release-asset .release-brand-logo--suse { color: var(--brand-suse); mask-image: url("assets/formats/simple-icons/suse.svg"); }
+.release-asset .release-brand-logo--fedora { color: var(--brand-fedora); mask-image: url("assets/formats/simple-icons/fedora.svg"); }
+.release-asset .release-brand-logo--debian { color: var(--brand-debian); mask-image: url("assets/formats/simple-icons/debian.svg"); }
+.release-asset .release-brand-logo--ubuntu { color: var(--brand-ubuntu); mask-image: url("assets/formats/simple-icons/ubuntu.svg"); }
+.release-asset-icon--paired { grid-template-columns: repeat(2, 18px); gap: 2px; }
+.release-asset-icon--paired .release-brand-logo { width: 18px; height: 18px; }
+.release-asset-icon--brands-3 { grid-template-columns: repeat(3, 13px); gap: 1px; }
+.release-asset-icon--brands-3 .release-brand-logo { width: 13px; height: 13px; }
 .release-asset .release-asset-icon--appimage { border-radius: 12px; color: var(--format-appimage); }
 .release-asset .release-asset-icon--archive { border-radius: 9px; color: var(--format-archive); }
-.release-asset .release-asset-icon--package { clip-path: polygon(50% 0, 94% 23%, 94% 77%, 50% 100%, 6% 77%, 6% 23%); color: var(--format-package); }
-.release-asset .release-asset-icon--disk { border-radius: 50%; color: var(--format-disk); }
+.release-asset .release-asset-icon--archlinux, .release-asset .release-asset-icon--package { clip-path: polygon(50% 0, 94% 23%, 94% 77%, 50% 100%, 6% 77%, 6% 23%); color: var(--format-package); }
+.release-asset .release-asset-icon--apple { border-radius: 50%; color: var(--format-disk); }
 .release-asset .release-asset-icon--rpm { border-radius: 15px 8px; color: var(--format-rpm); }
 .release-asset .release-asset-icon--deb { border-radius: 8px 15px; color: var(--format-deb); }
 .release-asset-download { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: baseline; min-width: 0; }
+.release-asset-compatibility { grid-column: 1 / -1; }
 .release-asset a { color: var(--text); font-weight: 720; }
 .release-asset span, .release-asset code { color: var(--muted); font-size: 12px; }
 .release-asset code { grid-column: 2; overflow-wrap: anywhere; }
