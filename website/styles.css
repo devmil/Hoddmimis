@@ -171,16 +171,16 @@ h3 { margin-bottom: 10px; font-size: 18px; }
 .release-notes { margin-top: 32px; border-top: 1px solid var(--line); padding-top: 24px; }
 .release-notes h3 { margin-top: 0; }
 .release-notes li + li { margin-top: 10px; }
-.release-asset { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 8px 14px; align-items: center; border: 1px solid var(--line); border-radius: 9px; padding: 16px; background: var(--surface); }
-.release-asset--multi-brand { grid-template-columns: max-content minmax(0, 1fr); }
+.release-asset { display: grid; gap: 9px; border: 1px solid var(--line); border-radius: 9px; padding: 16px; background: var(--surface); }
+.release-asset-header { display: flex; justify-content: space-between; gap: 16px; align-items: center; min-width: 0; }
 .release-icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 .release-asset-icon { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid color-mix(in srgb, currentColor 58%, transparent); border-radius: 11px; background: color-mix(in srgb, currentColor 13%, var(--surface)); color: var(--format-package); }
 .release-asset-icon svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
 .release-asset-icon--brands { display: flex; width: auto; height: auto; gap: 8px; border: 0; border-radius: 0; background: none; }
 .release-brand-badge { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid color-mix(in srgb, currentColor 58%, transparent); border-radius: 11px; background: color-mix(in srgb, currentColor 13%, var(--surface)); }
-.release-asset--multi-brand .release-brand-badge { width: 38px; height: 38px; }
+.release-asset-icon--multi .release-brand-badge { width: 38px; height: 38px; }
 .release-brand-logo { width: 28px; height: 28px; background: currentColor; mask-position: center; mask-repeat: no-repeat; mask-size: contain; }
-.release-asset--multi-brand .release-brand-logo { width: 24px; height: 24px; }
+.release-asset-icon--multi .release-brand-logo { width: 24px; height: 24px; }
 .release-asset .release-brand-badge--linux { color: var(--brand-linux); }
 .release-asset .release-brand-badge--apple { color: var(--brand-apple); }
 .release-asset .release-brand-badge--archlinux { color: var(--brand-archlinux); }
@@ -199,11 +199,12 @@ h3 { margin-bottom: 10px; font-size: 18px; }
 .release-brand-logo--ubuntu { mask-image: url("assets/formats/simple-icons/ubuntu.svg"); }
 .release-asset .release-asset-icon--archive { border-radius: 9px; color: var(--format-archive); }
 .release-asset .release-asset-icon--package { clip-path: polygon(50% 0, 94% 23%, 94% 77%, 50% 100%, 6% 77%, 6% 23%); color: var(--format-package); }
-.release-asset-download { display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: baseline; min-width: 0; }
-.release-asset-compatibility { grid-column: 1 / -1; }
+.release-asset-download { display: grid; gap: 4px; min-width: 0; }
+.release-asset-meta { max-width: 60%; text-align: right; }
+.release-asset-title { margin: 0; font-size: 16px; line-height: 1.3; }
 .release-asset a { color: var(--text); font-weight: 720; }
 .release-asset span, .release-asset code { color: var(--muted); font-size: 12px; }
-.release-asset code { grid-column: 2; overflow-wrap: anywhere; }
+.release-asset code { overflow-wrap: anywhere; }
 .manifest-error { color: var(--muted); }
 
 footer { display: flex; justify-content: space-between; gap: 24px; max-width: 1180px; margin: 0 auto; border-top: 1px solid var(--line); padding: 28px 22px 40px; color: var(--faint); font-size: 13px; }
@@ -220,11 +221,8 @@ footer { display: flex; justify-content: space-between; gap: 24px; max-width: 11
   .feature-grid { grid-template-columns: 1fr; }
   .release-status dl { grid-template-columns: 1fr; gap: 5px; }
   .release-status dd { margin-bottom: 14px; }
-  .release-asset-download { grid-template-columns: 1fr; gap: 2px; }
-  .release-asset--multi-brand { grid-template-columns: 1fr; }
-  .release-asset--multi-brand .release-asset-icon,
-  .release-asset--multi-brand .release-asset-download,
-  .release-asset--multi-brand code { grid-column: 1; }
+  .release-asset-header { gap: 12px; }
+  .release-asset-meta { max-width: 52%; }
   footer { flex-direction: column; padding-left: 16px; padding-right: 16px; }
 }
 

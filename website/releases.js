@@ -13,10 +13,20 @@ function formatBytes(bytes) {
   return `${value >= 10 || unit === "B" ? value.toFixed(0) : value.toFixed(1)} ${unit}`;
 }
 
-function platformLabel(asset) {
-  const platform = asset.platform === "macos" ? "macOS" : "Linux";
-  const architecture = asset.architecture === "arm64" ? "Apple Silicon" : asset.architecture;
-  return `${platform} ${architecture}`;
+function architectureLabel(asset) {
+  return asset.architecture === "arm64" ? "Apple silicon" : asset.architecture;
+}
+
+function downloadTitle(format) {
+  const titles = {
+    AppImage: "Linux AppImage",
+    "tar.gz": "Portable Linux archive",
+    "pkg.tar.zst": "Arch Linux package",
+    dmg: "macOS disk image",
+    rpm: "RPM package",
+    deb: "DEB package",
+  };
+  return titles[format] || `${format} package`;
 }
 
 function formatIcon(format) {
@@ -45,9 +55,9 @@ function formatBrands(format) {
 function installationLabel(format) {
   const labels = {
     AppImage: "Standalone",
-    "tar.gz": "Portable archive",
+    "tar.gz": "Manual install",
     "pkg.tar.zst": "pacman",
-    dmg: "macOS disk image",
+    dmg: "Drag to Applications",
     rpm: "DNF / Zypper",
     deb: "APT",
   };
@@ -56,8 +66,8 @@ function installationLabel(format) {
 
 function distributionLabel(format) {
   const labels = {
-    AppImage: "Runs on most x86_64 Linux distributions",
-    "tar.gz": "Portable Linux archive",
+    AppImage: "Runs on most Linux distributions",
+    "tar.gz": "Works without a package manager",
     "pkg.tar.zst": "Common on Arch Linux, Manjaro, EndeavourOS, and Omarchy",
     dmg: "For Apple silicon macOS",
     rpm: "Common on Fedora, Red Hat Enterprise Linux, openSUSE, Rocky Linux, AlmaLinux, and CentOS Stream",
@@ -69,6 +79,8 @@ function distributionLabel(format) {
 function createAsset(asset) {
   const article = document.createElement("article");
   article.className = "release-asset";
+  const header = document.createElement("div");
+  header.className = "release-asset-header";
   const icon = document.createElement("span");
   const iconName = formatIcon(asset.format);
   icon.className = `release-asset-icon release-asset-icon--${iconName}`;
@@ -76,7 +88,7 @@ function createAsset(asset) {
   const brands = formatBrands(asset.format);
   if (brands.length > 0) {
     icon.classList.add("release-asset-icon--brands");
-    article.classList.toggle("release-asset--multi-brand", brands.length > 1);
+    icon.classList.toggle("release-asset-icon--multi", brands.length > 1);
     for (const brand of brands) {
       const badge = document.createElement("span");
       badge.className = `release-brand-badge release-brand-badge--${brand}`;
@@ -97,20 +109,25 @@ function createAsset(asset) {
   download.className = "release-asset-download";
   const link = document.createElement("a");
   link.href = asset.url;
-  link.textContent = platformLabel(asset);
+  link.textContent = downloadTitle(asset.format);
   link.setAttribute(
     "aria-label",
-    `Download Hoddmimis for ${platformLabel(asset)} as ${asset.format}, ${installationLabel(asset.format)}`,
+    `Download Hoddmimis ${downloadTitle(asset.format)} for ${architectureLabel(asset)}, ${installationLabel(asset.format)}`,
   );
+  const title = document.createElement("h3");
+  title.className = "release-asset-title";
+  title.append(link);
   const size = document.createElement("span");
-  size.textContent = `${asset.format} · ${installationLabel(asset.format)} · ${formatBytes(asset.bytes)}`;
+  size.className = "release-asset-meta";
+  size.textContent = `${architectureLabel(asset)} · ${asset.format} · ${installationLabel(asset.format)} · ${formatBytes(asset.bytes)}`;
   const compatibility = document.createElement("span");
   compatibility.className = "release-asset-compatibility";
   compatibility.textContent = distributionLabel(asset.format);
-  download.append(link, size, compatibility);
+  header.append(icon, size);
+  download.append(title, compatibility);
   const checksum = document.createElement("code");
   checksum.textContent = `SHA-256 ${asset.sha256}`;
-  article.append(icon, download, checksum);
+  article.append(header, download, checksum);
   return article;
 }
 
