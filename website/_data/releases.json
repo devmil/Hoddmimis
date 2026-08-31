@@ -2,71 +2,138 @@
   "schema_version": 1,
   "product": "Hoddmimis",
   "latest": {
-    "version": "0.1.10-beta.1",
-    "build": 11,
-    "tag": "v0.1.10-beta.1-11",
+    "version": "0.1.11-beta.1",
+    "build": 12,
+    "tag": "v0.1.11-beta.1-12",
     "channel": "beta",
     "assets": [
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "AppImage",
-        "file": "Hoddmimis-0.1.10-beta.1-11-linux-x86_64.AppImage",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.10-beta.1-11/Hoddmimis-0.1.10-beta.1-11-linux-x86_64.AppImage",
-        "bytes": 73681400,
-        "sha256": "5fd5c5fdf890603d12d7855ed834150596f73de94443b0bd08b22c8649f2e486"
+        "file": "Hoddmimis-0.1.11-beta.1-12-linux-x86_64.AppImage",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/Hoddmimis-0.1.11-beta.1-12-linux-x86_64.AppImage",
+        "bytes": 54987256,
+        "sha256": "39f074413fb7477c03b136399c53f198b827ce41fdbd5180bb890ea6cca5d79f"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "tar.gz",
-        "file": "Hoddmimis-0.1.10-beta.1-11-linux-x86_64.tar.gz",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.10-beta.1-11/Hoddmimis-0.1.10-beta.1-11-linux-x86_64.tar.gz",
-        "bytes": 79602519,
-        "sha256": "aefbe9876f604802bb14892bc89135d086038e8c8519638b6dc6843cc06be196"
+        "file": "Hoddmimis-0.1.11-beta.1-12-linux-x86_64.tar.gz",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/Hoddmimis-0.1.11-beta.1-12-linux-x86_64.tar.gz",
+        "bytes": 59012131,
+        "sha256": "333ed68526ae01d460045932e23bb8d320815e838cc9b03b5843dde4f446b8a8"
       },
       {
         "platform": "macos",
         "architecture": "arm64",
         "format": "dmg",
-        "file": "Hoddmimis-0.1.10-beta.1-11-macos-arm64.dmg",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.10-beta.1-11/Hoddmimis-0.1.10-beta.1-11-macos-arm64.dmg",
-        "bytes": 94449519,
-        "sha256": "d27a5ad7d5073b12f740a7292fba6ac82b7f331871acd370382a62d7537bf05a"
+        "file": "Hoddmimis-0.1.11-beta.1-12-macos-arm64.dmg",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/Hoddmimis-0.1.11-beta.1-12-macos-arm64.dmg",
+        "bytes": 94131504,
+        "sha256": "7fd4af154d9a69348be86028e78e5ec987109be2c4c5b04c1c0e06609254a789"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "rpm",
-        "file": "hoddmimis-0.1.10-beta.1-11.x86_64.rpm",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.10-beta.1-11/hoddmimis-0.1.10-beta.1-11.x86_64.rpm",
-        "bytes": 62254596,
-        "sha256": "d0ba3fc1108064e65140a387615ac9368ecda5df4a24f9c9533948df9d8c37b7"
+        "file": "hoddmimis-0.1.11-beta.1-12.x86_64.rpm",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/hoddmimis-0.1.11-beta.1-12.x86_64.rpm",
+        "bytes": 46066025,
+        "sha256": "c34bb953ede1bf08c27b6f9bbe6e3d0d4f66189a1d34cf53ec3e61b756a6f0cf"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "pkg.tar.zst",
-        "file": "hoddmimis-0.1.10_beta.1-11-x86_64.pkg.tar.zst",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.10-beta.1-11/hoddmimis-0.1.10_beta.1-11-x86_64.pkg.tar.zst",
-        "bytes": 75894087,
-        "sha256": "ff44bd563ce50b2833a7f9f6bbdbc1fa5b9594ea06beaff480f83255f41b0e4b"
+        "file": "hoddmimis-0.1.11_beta.1-12-x86_64.pkg.tar.zst",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/hoddmimis-0.1.11_beta.1-12-x86_64.pkg.tar.zst",
+        "bytes": 56640440,
+        "sha256": "c8880b1d34b014f6f5c4aa1305d508e5bdd2a5601c7033365fffdb5e02ace351"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "deb",
-        "file": "hoddmimis_0.1.10-beta.1-11_amd64.deb",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.10-beta.1-11/hoddmimis_0.1.10-beta.1-11_amd64.deb",
-        "bytes": 57040788,
-        "sha256": "019c4718c5f46fc7d75024cf41c9e6f45cfd910833a8775fef487aef6b481e9e"
+        "file": "hoddmimis_0.1.11-beta.1-12_amd64.deb",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/hoddmimis_0.1.11-beta.1-12_amd64.deb",
+        "bytes": 42405620,
+        "sha256": "319b7f14a015c181f4d63d0cab88c867f9abf7a6132fe18cd02d4b53e102394c"
       }
     ],
     "notes": [
-      "The application menu now provides an in-app viewer for the bundled Geist and Lucide license texts."
+      "System appearance now follows the Linux desktop portal when Qt does not detect the desktop preference. This fixes dark-theme detection on Omarchy and other portal-backed desktops.",
+      "The Licenses window now includes Hoddmimis, Qt and QtBridge, and locked Rust dependency notices. Installers carry the same texts alongside the existing Geist and Lucide licenses."
     ]
   },
   "releases": [
+    {
+      "version": "0.1.11-beta.1",
+      "build": 12,
+      "tag": "v0.1.11-beta.1-12",
+      "channel": "beta",
+      "assets": [
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "AppImage",
+          "file": "Hoddmimis-0.1.11-beta.1-12-linux-x86_64.AppImage",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/Hoddmimis-0.1.11-beta.1-12-linux-x86_64.AppImage",
+          "bytes": 54987256,
+          "sha256": "39f074413fb7477c03b136399c53f198b827ce41fdbd5180bb890ea6cca5d79f"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "tar.gz",
+          "file": "Hoddmimis-0.1.11-beta.1-12-linux-x86_64.tar.gz",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/Hoddmimis-0.1.11-beta.1-12-linux-x86_64.tar.gz",
+          "bytes": 59012131,
+          "sha256": "333ed68526ae01d460045932e23bb8d320815e838cc9b03b5843dde4f446b8a8"
+        },
+        {
+          "platform": "macos",
+          "architecture": "arm64",
+          "format": "dmg",
+          "file": "Hoddmimis-0.1.11-beta.1-12-macos-arm64.dmg",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/Hoddmimis-0.1.11-beta.1-12-macos-arm64.dmg",
+          "bytes": 94131504,
+          "sha256": "7fd4af154d9a69348be86028e78e5ec987109be2c4c5b04c1c0e06609254a789"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "rpm",
+          "file": "hoddmimis-0.1.11-beta.1-12.x86_64.rpm",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/hoddmimis-0.1.11-beta.1-12.x86_64.rpm",
+          "bytes": 46066025,
+          "sha256": "c34bb953ede1bf08c27b6f9bbe6e3d0d4f66189a1d34cf53ec3e61b756a6f0cf"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "pkg.tar.zst",
+          "file": "hoddmimis-0.1.11_beta.1-12-x86_64.pkg.tar.zst",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/hoddmimis-0.1.11_beta.1-12-x86_64.pkg.tar.zst",
+          "bytes": 56640440,
+          "sha256": "c8880b1d34b014f6f5c4aa1305d508e5bdd2a5601c7033365fffdb5e02ace351"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "deb",
+          "file": "hoddmimis_0.1.11-beta.1-12_amd64.deb",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.11-beta.1-12/hoddmimis_0.1.11-beta.1-12_amd64.deb",
+          "bytes": 42405620,
+          "sha256": "319b7f14a015c181f4d63d0cab88c867f9abf7a6132fe18cd02d4b53e102394c"
+        }
+      ],
+      "notes": [
+        "System appearance now follows the Linux desktop portal when Qt does not detect the desktop preference. This fixes dark-theme detection on Omarchy and other portal-backed desktops.",
+        "The Licenses window now includes Hoddmimis, Qt and QtBridge, and locked Rust dependency notices. Installers carry the same texts alongside the existing Geist and Lucide licenses."
+      ]
+    },
     {
       "version": "0.1.10-beta.1",
       "build": 11,
@@ -311,63 +378,6 @@
       "notes": [
         "Bubblewrap ancestors of Flatpak applications such as Bitwarden now show the owning application's name and icon when their identities match exactly.",
         "The macOS disk image now includes an Applications link. Pin outlines and active-tab underlines no longer flicker while resizing on scaled Linux displays. German aggregate metrics now use compact labels such as \"CPU gesamt\" and \"RSS gesamt\"."
-      ]
-    },
-    {
-      "version": "0.1.6-beta.1",
-      "build": 7,
-      "tag": "v0.1.6-beta.1-7",
-      "channel": "beta",
-      "assets": [
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "AppImage",
-          "file": "Hoddmimis-0.1.6-beta.1-7-linux-x86_64.AppImage",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.6-beta.1-7/Hoddmimis-0.1.6-beta.1-7-linux-x86_64.AppImage",
-          "bytes": 73304568,
-          "sha256": "ceeab25a5617fe0bf8baad8d4c6d35ecbb4630624f6f6e9994d1e81a116a56c2"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "tar.gz",
-          "file": "Hoddmimis-0.1.6-beta.1-7-linux-x86_64.tar.gz",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.6-beta.1-7/Hoddmimis-0.1.6-beta.1-7-linux-x86_64.tar.gz",
-          "bytes": 79196255,
-          "sha256": "da4d9a4f29295b91e06278463cdb4f94c26e011bd9d11f95cd3e631dd15376f5"
-        },
-        {
-          "platform": "macos",
-          "architecture": "arm64",
-          "format": "dmg",
-          "file": "Hoddmimis-0.1.6-beta.1-7-macos-arm64.dmg",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.6-beta.1-7/Hoddmimis-0.1.6-beta.1-7-macos-arm64.dmg",
-          "bytes": 91617928,
-          "sha256": "84729931c88554d3f0f2664c1b0fe1734a2cba2e943e072d92913b679674bd06"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "rpm",
-          "file": "hoddmimis-0.1.6-beta.1-7.x86_64.rpm",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.6-beta.1-7/hoddmimis-0.1.6-beta.1-7.x86_64.rpm",
-          "bytes": 61892175,
-          "sha256": "ccd6604bc9d52ae9ca5abd8890e831c21770ff9ada4ed67fde372598afe4c547"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "deb",
-          "file": "hoddmimis_0.1.6-beta.1-7_amd64.deb",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.1.6-beta.1-7/hoddmimis_0.1.6-beta.1-7_amd64.deb",
-          "bytes": 56724216,
-          "sha256": "1569ea35d906f2b18963d613ae6a074aee321719a6ecdc079d500aa501dabf2d"
-        }
-      ],
-      "notes": [
-        "Bitwarden and other Flatpak applications with renamed desktop IDs now show their installed application name and icon.",
-        "Populate the inspector from the process tree's initial selection when the application starts."
       ]
     }
   ]
