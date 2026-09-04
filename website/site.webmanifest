@@ -1,7 +1,7 @@
 {
   "name": "Hoddmimis",
   "short_name": "Hoddmimis",
-  "description": "A Rust and QML process explorer for Linux and macOS",
+  "description": "A Rust and QML process explorer for Linux, macOS, and Windows",
   "start_url": "./index.html",
   "display": "browser",
   "background_color": "#0d0f13",

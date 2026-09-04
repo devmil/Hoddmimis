@@ -23,6 +23,7 @@ function downloadTitle(format) {
     "tar.gz": "Portable Linux archive",
     "pkg.tar.zst": "Arch Linux package",
     dmg: "macOS disk image",
+    zip: "Windows portable ZIP",
     rpm: "RPM package",
     deb: "DEB package",
   };
@@ -35,6 +36,7 @@ function formatIcon(format) {
     "tar.gz": "archive",
     "pkg.tar.zst": "archlinux",
     dmg: "apple",
+    zip: "windows",
     rpm: "rpm",
     deb: "deb",
   };
@@ -58,6 +60,7 @@ function installationLabel(format) {
     "tar.gz": "Manual install",
     "pkg.tar.zst": "pacman",
     dmg: "Drag to Applications",
+    zip: "Extract and run",
     rpm: "DNF / Zypper",
     deb: "APT",
   };
@@ -70,6 +73,7 @@ function distributionLabel(format) {
     "tar.gz": "Works without a package manager",
     "pkg.tar.zst": "Common on Arch Linux, Manjaro, EndeavourOS, and Omarchy",
     dmg: "For Apple silicon macOS",
+    zip: "For x86_64 Windows 10 1809 or later and Windows 11",
     rpm: "Common on Fedora, Red Hat Enterprise Linux, openSUSE, Rocky Linux, AlmaLinux, and CentOS Stream",
     deb: "Common on Debian, Ubuntu, Linux Mint, and Pop!_OS",
   };
