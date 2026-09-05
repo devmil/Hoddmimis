@@ -24,9 +24,13 @@ function isTui(asset) {
 function downloadTitle(asset) {
   if (isTui(asset)) {
     const titles = {
+      "linux:deb": "Linux TUI DEB package",
       "linux:rpm": "Linux TUI RPM package",
+      "linux:pkg.tar.zst": "Arch Linux TUI package",
       "linux:tar.gz": "Portable Linux TUI archive",
+      "macos:pkg": "macOS TUI installer",
       "macos:zip": "macOS TUI installer archive",
+      "windows:msi": "Windows TUI installer",
       "windows:zip": "Windows TUI installer archive",
     };
     return titles[`${asset.platform}:${asset.format}`] || "TUI package";
@@ -38,6 +42,7 @@ function downloadTitle(asset) {
     "pkg.tar.zst": "Arch Linux package",
     dmg: "macOS disk image",
     zip: "Windows portable ZIP",
+    msi: "Windows installer",
     rpm: "RPM package",
     deb: "DEB package",
   };
@@ -60,10 +65,16 @@ function formatBrands(asset) {
 
 function installationLabel(asset) {
   if (isTui(asset)) {
-    if (asset.format === "rpm") {
-      return "DNF / Zypper";
-    }
-    return asset.platform === "linux" ? "Manual install" : "Installer included";
+    const labels = {
+      deb: "APT",
+      rpm: "DNF / Zypper",
+      "pkg.tar.zst": "pacman",
+      "tar.gz": "Manual install",
+      pkg: "Installer",
+      msi: "Installer",
+      zip: "Installer included",
+    };
+    return labels[asset.format] || "Package";
   }
   const format = asset.format;
   const labels = {
@@ -72,6 +83,7 @@ function installationLabel(asset) {
     "pkg.tar.zst": "pacman",
     dmg: "Drag to Applications",
     zip: "Extract and run",
+    msi: "Installer",
     rpm: "DNF / Zypper",
     deb: "APT",
   };
@@ -82,8 +94,8 @@ function distributionLabel(asset) {
   if (isTui(asset)) {
     const labels = {
       linux: "Qt-free terminal build for x86_64 Linux",
-      macos: "Signed and notarized terminal build with an install script for Apple silicon macOS",
-      windows: "Console build with a per-user installer for x86_64 Windows 10 1809 or later and Windows 11",
+      macos: "Signed and notarized terminal build for Apple silicon macOS",
+      windows: "Console build for x86_64 Windows 10 1809 or later and Windows 11",
     };
     return labels[asset.platform] || "Terminal build";
   }
@@ -94,6 +106,7 @@ function distributionLabel(asset) {
     "pkg.tar.zst": "Common on Arch Linux, Manjaro, EndeavourOS, and Omarchy",
     dmg: "For Apple silicon macOS",
     zip: "For x86_64 Windows 10 1809 or later and Windows 11",
+    msi: "For x86_64 Windows 10 1809 or later and Windows 11",
     rpm: "Common on Fedora, Red Hat Enterprise Linux, openSUSE, Rocky Linux, AlmaLinux, and CentOS Stream",
     deb: "Common on Debian, Ubuntu, Linux Mint, and Pop!_OS",
   };
