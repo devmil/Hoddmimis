@@ -23,8 +23,13 @@ function isTui(asset) {
 
 function downloadTitle(asset) {
   if (isTui(asset)) {
-    const platforms = { linux: "Linux", macos: "macOS", windows: "Windows" };
-    return `${platforms[asset.platform] || asset.platform} TUI`;
+    const titles = {
+      "linux:rpm": "Linux TUI RPM package",
+      "linux:tar.gz": "Portable Linux TUI archive",
+      "macos:zip": "macOS TUI installer archive",
+      "windows:zip": "Windows TUI installer archive",
+    };
+    return titles[`${asset.platform}:${asset.format}`] || "TUI package";
   }
   const format = asset.format;
   const titles = {
@@ -39,32 +44,14 @@ function downloadTitle(asset) {
   return titles[format] || `${format} package`;
 }
 
-function formatIcon(asset) {
-  if (isTui(asset)) {
-    return asset.platform === "macos" ? "apple" : asset.platform === "windows" ? "windows" : "archive";
-  }
-  const format = asset.format;
-  const icons = {
-    AppImage: "appimage",
-    "tar.gz": "archive",
-    "pkg.tar.zst": "archlinux",
-    dmg: "apple",
-    zip: "windows",
-    rpm: "rpm",
-    deb: "deb",
-  };
-  return icons[format] || "package";
+function platformIcon(asset) {
+  return { linux: "linux", macos: "apple", windows: "windows" }[asset.platform] || "package";
 }
 
 function formatBrands(asset) {
-  if (isTui(asset)) {
-    return asset.platform === "linux" ? ["linux"] : [];
-  }
   const format = asset.format;
   const brands = {
-    AppImage: ["linux"],
     "pkg.tar.zst": ["archlinux"],
-    dmg: ["apple"],
     rpm: ["fedora", "redhat", "suse"],
     deb: ["debian", "ubuntu"],
   };
@@ -73,7 +60,10 @@ function formatBrands(asset) {
 
 function installationLabel(asset) {
   if (isTui(asset)) {
-    return "Extract and run";
+    if (asset.format === "rpm") {
+      return "DNF / Zypper";
+    }
+    return asset.platform === "linux" ? "Manual install" : "Installer included";
   }
   const format = asset.format;
   const labels = {
@@ -92,8 +82,8 @@ function distributionLabel(asset) {
   if (isTui(asset)) {
     const labels = {
       linux: "Qt-free terminal build for x86_64 Linux",
-      macos: "Signed and notarized terminal build for Apple silicon macOS",
-      windows: "Console build for x86_64 Windows 10 1809 or later and Windows 11",
+      macos: "Signed and notarized terminal build with an install script for Apple silicon macOS",
+      windows: "Console build with a per-user installer for x86_64 Windows 10 1809 or later and Windows 11",
     };
     return labels[asset.platform] || "Terminal build";
   }
@@ -116,28 +106,26 @@ function createAsset(asset) {
   const header = document.createElement("div");
   header.className = "release-asset-header";
   const icon = document.createElement("span");
-  const iconName = formatIcon(asset);
-  icon.className = `release-asset-icon release-asset-icon--${iconName}`;
+  icon.className = "release-asset-icon release-asset-icon--brands";
   icon.setAttribute("aria-hidden", "true");
-  const brands = formatBrands(asset);
-  if (brands.length > 0) {
-    icon.classList.add("release-asset-icon--brands");
-    icon.classList.toggle("release-asset-icon--multi", brands.length > 1);
-    for (const brand of brands) {
-      const badge = document.createElement("span");
-      badge.className = `release-brand-badge release-brand-badge--${brand}`;
+  const brands = [platformIcon(asset), ...formatBrands(asset)];
+  icon.classList.toggle("release-asset-icon--multi", brands.length > 1);
+  for (const brand of brands) {
+    const badge = document.createElement("span");
+    badge.className = `release-brand-badge release-brand-badge--${brand}`;
+    if (brand === "windows" || brand === "package") {
+      const graphic = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      graphic.setAttribute("viewBox", "0 0 32 32");
+      const symbol = document.createElementNS("http://www.w3.org/2000/svg", "use");
+      symbol.setAttribute("href", `#release-icon-${brand}`);
+      graphic.append(symbol);
+      badge.append(graphic);
+    } else {
       const logo = document.createElement("span");
       logo.className = `release-brand-logo release-brand-logo--${brand}`;
       badge.append(logo);
-      icon.append(badge);
     }
-  } else {
-    const graphic = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    graphic.setAttribute("viewBox", "0 0 32 32");
-    const symbol = document.createElementNS("http://www.w3.org/2000/svg", "use");
-    symbol.setAttribute("href", `#release-icon-${iconName}`);
-    graphic.append(symbol);
-    icon.append(graphic);
+    icon.append(badge);
   }
   const download = document.createElement("div");
   download.className = "release-asset-download";
@@ -148,7 +136,7 @@ function createAsset(asset) {
     "aria-label",
     `Download Hoddmimis ${downloadTitle(asset)} for ${architectureLabel(asset)}, ${installationLabel(asset)}`,
   );
-  const title = document.createElement("h3");
+  const title = document.createElement("h4");
   title.className = "release-asset-title";
   title.append(link);
   const size = document.createElement("span");
@@ -165,6 +153,23 @@ function createAsset(asset) {
   return article;
 }
 
+function createAssetGroup(titleText, descriptionText, releaseAssets) {
+  const section = document.createElement("section");
+  section.className = "release-asset-group";
+  const heading = document.createElement("h3");
+  heading.textContent = titleText;
+  const description = document.createElement("p");
+  description.className = "release-asset-group-description";
+  description.textContent = descriptionText;
+  const assets = document.createElement("div");
+  assets.className = "release-assets";
+  for (const asset of releaseAssets) {
+    assets.append(createAsset(asset));
+  }
+  section.append(heading, description, assets);
+  return section;
+}
+
 function createRelease(release, current) {
   const section = document.createElement("section");
   section.className = "release-entry";
@@ -175,12 +180,27 @@ function createRelease(release, current) {
   const label = document.createElement("p");
   label.className = "release-channel";
   label.textContent = current ? `Current ${release.channel} release` : `${release.channel} release`;
-  const assets = document.createElement("div");
-  assets.className = "release-assets";
-  for (const asset of release.assets) {
-    assets.append(createAsset(asset));
+  const fullAssets = release.assets.filter((asset) => !isTui(asset));
+  const tuiAssets = release.assets.filter(isTui);
+  section.append(heading, label);
+  if (fullAssets.length > 0) {
+    section.append(
+      createAssetGroup(
+        "Full releases",
+        "Desktop application bundles. Native Linux packages also install the hoddmimis-tui command.",
+        fullAssets,
+      ),
+    );
   }
-  section.append(heading, label, assets);
+  if (tuiAssets.length > 0) {
+    section.append(
+      createAssetGroup(
+        "TUI releases",
+        "Qt-free terminal packages for systems that do not need the desktop application.",
+        tuiAssets,
+      ),
+    );
+  }
   if (Array.isArray(release.notes) && release.notes.length > 0) {
     const notes = document.createElement("section");
     notes.className = "release-notes";
