@@ -17,7 +17,16 @@ function architectureLabel(asset) {
   return asset.architecture === "arm64" ? "Apple silicon" : asset.architecture;
 }
 
-function downloadTitle(format) {
+function isTui(asset) {
+  return asset.variant === "tui";
+}
+
+function downloadTitle(asset) {
+  if (isTui(asset)) {
+    const platforms = { linux: "Linux", macos: "macOS", windows: "Windows" };
+    return `${platforms[asset.platform] || asset.platform} TUI`;
+  }
+  const format = asset.format;
   const titles = {
     AppImage: "Linux AppImage",
     "tar.gz": "Portable Linux archive",
@@ -30,7 +39,11 @@ function downloadTitle(format) {
   return titles[format] || `${format} package`;
 }
 
-function formatIcon(format) {
+function formatIcon(asset) {
+  if (isTui(asset)) {
+    return asset.platform === "macos" ? "apple" : asset.platform === "windows" ? "windows" : "archive";
+  }
+  const format = asset.format;
   const icons = {
     AppImage: "appimage",
     "tar.gz": "archive",
@@ -43,7 +56,11 @@ function formatIcon(format) {
   return icons[format] || "package";
 }
 
-function formatBrands(format) {
+function formatBrands(asset) {
+  if (isTui(asset)) {
+    return asset.platform === "linux" ? ["linux"] : [];
+  }
+  const format = asset.format;
   const brands = {
     AppImage: ["linux"],
     "pkg.tar.zst": ["archlinux"],
@@ -54,7 +71,11 @@ function formatBrands(format) {
   return brands[format] || [];
 }
 
-function installationLabel(format) {
+function installationLabel(asset) {
+  if (isTui(asset)) {
+    return "Extract and run";
+  }
+  const format = asset.format;
   const labels = {
     AppImage: "Standalone",
     "tar.gz": "Manual install",
@@ -67,7 +88,16 @@ function installationLabel(format) {
   return labels[format] || "Package";
 }
 
-function distributionLabel(format) {
+function distributionLabel(asset) {
+  if (isTui(asset)) {
+    const labels = {
+      linux: "Qt-free terminal build for x86_64 Linux",
+      macos: "Signed and notarized terminal build for Apple silicon macOS",
+      windows: "Console build for x86_64 Windows 10 1809 or later and Windows 11",
+    };
+    return labels[asset.platform] || "Terminal build";
+  }
+  const format = asset.format;
   const labels = {
     AppImage: "Runs on most Linux distributions",
     "tar.gz": "Works without a package manager",
@@ -86,10 +116,10 @@ function createAsset(asset) {
   const header = document.createElement("div");
   header.className = "release-asset-header";
   const icon = document.createElement("span");
-  const iconName = formatIcon(asset.format);
+  const iconName = formatIcon(asset);
   icon.className = `release-asset-icon release-asset-icon--${iconName}`;
   icon.setAttribute("aria-hidden", "true");
-  const brands = formatBrands(asset.format);
+  const brands = formatBrands(asset);
   if (brands.length > 0) {
     icon.classList.add("release-asset-icon--brands");
     icon.classList.toggle("release-asset-icon--multi", brands.length > 1);
@@ -113,20 +143,20 @@ function createAsset(asset) {
   download.className = "release-asset-download";
   const link = document.createElement("a");
   link.href = asset.url;
-  link.textContent = downloadTitle(asset.format);
+  link.textContent = downloadTitle(asset);
   link.setAttribute(
     "aria-label",
-    `Download Hoddmimis ${downloadTitle(asset.format)} for ${architectureLabel(asset)}, ${installationLabel(asset.format)}`,
+    `Download Hoddmimis ${downloadTitle(asset)} for ${architectureLabel(asset)}, ${installationLabel(asset)}`,
   );
   const title = document.createElement("h3");
   title.className = "release-asset-title";
   title.append(link);
   const size = document.createElement("span");
   size.className = "release-asset-meta";
-  size.textContent = `${architectureLabel(asset)} · ${asset.format} · ${installationLabel(asset.format)} · ${formatBytes(asset.bytes)}`;
+  size.textContent = `${architectureLabel(asset)} · ${asset.format} · ${installationLabel(asset)} · ${formatBytes(asset.bytes)}`;
   const compatibility = document.createElement("span");
   compatibility.className = "release-asset-compatibility";
-  compatibility.textContent = distributionLabel(asset.format);
+  compatibility.textContent = distributionLabel(asset);
   header.append(icon, size);
   download.append(title, compatibility);
   const checksum = document.createElement("code");
