@@ -2,9 +2,9 @@
   "schema_version": 1,
   "product": "Hoddmimis",
   "latest": {
-    "version": "0.2.6-beta.1",
-    "build": 24,
-    "tag": "v0.2.6-beta.1-24",
+    "version": "0.2.7-beta.1",
+    "build": 25,
+    "tag": "v0.2.7-beta.1-25",
     "channel": "beta",
     "assets": [
       {
@@ -12,168 +12,342 @@
         "architecture": "x86_64",
         "format": "AppImage",
         "variant": "desktop",
-        "file": "Hoddmimis-0.2.6-beta.1-24-linux-x86_64.AppImage",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/Hoddmimis-0.2.6-beta.1-24-linux-x86_64.AppImage",
-        "bytes": 41429496,
-        "sha256": "104ec47f86e161c66209e9c4851a0b4127fec78ba14ffdb37567ef8a068b70b4"
+        "file": "Hoddmimis-0.2.7-beta.1-25-linux-x86_64.AppImage",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-0.2.7-beta.1-25-linux-x86_64.AppImage",
+        "bytes": 41425400,
+        "sha256": "4b97cd338a7688b8061bcf54482a7ac58ed34ef2a53ec496700bd6900c0a7e63"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "tar.gz",
         "variant": "desktop",
-        "file": "Hoddmimis-0.2.6-beta.1-24-linux-x86_64.tar.gz",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/Hoddmimis-0.2.6-beta.1-24-linux-x86_64.tar.gz",
-        "bytes": 44104959,
-        "sha256": "125da01d868a3a67ab5c528a82f5421004c0ca802dde8a7cee9d28f8f77ff528"
+        "file": "Hoddmimis-0.2.7-beta.1-25-linux-x86_64.tar.gz",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-0.2.7-beta.1-25-linux-x86_64.tar.gz",
+        "bytes": 44104503,
+        "sha256": "aa694ee0b8c5d0f6d3eda46ef7ee8878ea6e1c0eba4fd0f1f4e886b58fb56792"
       },
       {
         "platform": "macos",
         "architecture": "arm64",
         "format": "dmg",
         "variant": "desktop",
-        "file": "Hoddmimis-0.2.6-beta.1-24-macos-arm64.dmg",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/Hoddmimis-0.2.6-beta.1-24-macos-arm64.dmg",
-        "bytes": 100669943,
-        "sha256": "38ba587f198c24f863c65147262222b2924925260e52b3f6626810ce8800af2d"
+        "file": "Hoddmimis-0.2.7-beta.1-25-macos-arm64.dmg",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-0.2.7-beta.1-25-macos-arm64.dmg",
+        "bytes": 100672379,
+        "sha256": "fad586dd7deb306387de6b4ab369a40f6e29201a449b7396742beab39e8a91cc"
       },
       {
         "platform": "windows",
         "architecture": "x86_64",
         "format": "msi",
         "variant": "desktop",
-        "file": "Hoddmimis-0.2.6-beta.1-24-windows-x86_64.msi",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/Hoddmimis-0.2.6-beta.1-24-windows-x86_64.msi",
-        "bytes": 42636322,
-        "sha256": "8b3f39be41959a1fcfd361511a49875dc6cd6c49338cddffe991fa3e90455533"
+        "file": "Hoddmimis-0.2.7-beta.1-25-windows-x86_64.msi",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-0.2.7-beta.1-25-windows-x86_64.msi",
+        "bytes": 42632226,
+        "sha256": "2f6f2d698666d4c58c272446f45255c5f8dd7a6290f7681d2f17cd5bd1bcd1c5"
       },
       {
         "platform": "windows",
         "architecture": "x86_64",
         "format": "zip",
         "variant": "desktop",
-        "file": "Hoddmimis-0.2.6-beta.1-24-windows-x86_64.zip",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/Hoddmimis-0.2.6-beta.1-24-windows-x86_64.zip",
-        "bytes": 52225626,
-        "sha256": "60f3667f0d5983e8e0159e49e00680582b43a7663bc52cf88365fe3342965f60"
+        "file": "Hoddmimis-0.2.7-beta.1-25-windows-x86_64.zip",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-0.2.7-beta.1-25-windows-x86_64.zip",
+        "bytes": 52226635,
+        "sha256": "9fd56e90491baebcc8cb56ed83c4646598a2e42782cbc9d8069c0ce755b22f9d"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "tar.gz",
         "variant": "tui",
-        "file": "Hoddmimis-TUI-0.2.6-beta.1-24-linux-x86_64.tar.gz",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/Hoddmimis-TUI-0.2.6-beta.1-24-linux-x86_64.tar.gz",
-        "bytes": 1578468,
-        "sha256": "e5fbf09fceef9534e80593a9e48aeb61cb8701b9d4f49c6ad7b18290de869708"
+        "file": "Hoddmimis-TUI-0.2.7-beta.1-25-linux-x86_64.tar.gz",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-TUI-0.2.7-beta.1-25-linux-x86_64.tar.gz",
+        "bytes": 1578424,
+        "sha256": "91410048998b0679748c9c6b9ee9bc2718e7c51c3cb857ec757109ad823c553e"
       },
       {
         "platform": "macos",
         "architecture": "arm64",
         "format": "pkg",
         "variant": "tui",
-        "file": "Hoddmimis-TUI-0.2.6-beta.1-24-macos-arm64.pkg",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/Hoddmimis-TUI-0.2.6-beta.1-24-macos-arm64.pkg",
-        "bytes": 2806868,
-        "sha256": "05b90d18e697abfcbf0531091f203cff2bfa2b68190e62e25815fdb82c941063"
+        "file": "Hoddmimis-TUI-0.2.7-beta.1-25-macos-arm64.pkg",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-TUI-0.2.7-beta.1-25-macos-arm64.pkg",
+        "bytes": 2807300,
+        "sha256": "7900de6341342e22a2e606429f79667dac4a1b4dc812a3e6c15163bc58b74ca5"
       },
       {
         "platform": "macos",
         "architecture": "arm64",
         "format": "zip",
         "variant": "tui",
-        "file": "Hoddmimis-TUI-0.2.6-beta.1-24-macos-arm64.zip",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/Hoddmimis-TUI-0.2.6-beta.1-24-macos-arm64.zip",
-        "bytes": 2790809,
-        "sha256": "71055f79067a7ccf5e7260dc531c72f36f207470efaccde7d0b1d5301ba8f37a"
+        "file": "Hoddmimis-TUI-0.2.7-beta.1-25-macos-arm64.zip",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-TUI-0.2.7-beta.1-25-macos-arm64.zip",
+        "bytes": 2791205,
+        "sha256": "a636c57414a83a400337a329d1462f180483b9b0bb65aa8a9f9b6860c5523e7f"
       },
       {
         "platform": "windows",
         "architecture": "x86_64",
         "format": "msi",
         "variant": "tui",
-        "file": "Hoddmimis-TUI-0.2.6-beta.1-24-windows-x86_64.msi",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/Hoddmimis-TUI-0.2.6-beta.1-24-windows-x86_64.msi",
+        "file": "Hoddmimis-TUI-0.2.7-beta.1-25-windows-x86_64.msi",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-TUI-0.2.7-beta.1-25-windows-x86_64.msi",
         "bytes": 2781184,
-        "sha256": "aa75633ade203036c97dd32a49e3d70880072ee7ba44b0e86a6edd2f4fac04cf"
+        "sha256": "ad9a24f28c89c613014518a472a74460d97325020be5a587cba3ddbac194f996"
       },
       {
         "platform": "windows",
         "architecture": "x86_64",
         "format": "zip",
         "variant": "tui",
-        "file": "Hoddmimis-TUI-0.2.6-beta.1-24-windows-x86_64.zip",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/Hoddmimis-TUI-0.2.6-beta.1-24-windows-x86_64.zip",
-        "bytes": 3424992,
-        "sha256": "82ac76325f88db1039a945807b0ecc080696ae4f66d8212bada9ae8ed0b586e5"
+        "file": "Hoddmimis-TUI-0.2.7-beta.1-25-windows-x86_64.zip",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-TUI-0.2.7-beta.1-25-windows-x86_64.zip",
+        "bytes": 3424491,
+        "sha256": "fb0673b702bc3f73686a24c9f8e58fe4795e1843f4adf46042839a352bbbef66"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "rpm",
         "variant": "desktop",
-        "file": "hoddmimis-0.2.6-beta.1-24.x86_64.rpm",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/hoddmimis-0.2.6-beta.1-24.x86_64.rpm",
-        "bytes": 44300587,
-        "sha256": "b46ce8e2e46633522f2a5617461a36cd375c1e6dfaa27295e26d2565950584aa"
+        "file": "hoddmimis-0.2.7-beta.1-25.x86_64.rpm",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis-0.2.7-beta.1-25.x86_64.rpm",
+        "bytes": 44300635,
+        "sha256": "ec0e7e90edfa493981528979875963ee3e2d62e6f983303afdd11c390ca2753e"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "pkg.tar.zst",
         "variant": "desktop",
-        "file": "hoddmimis-0.2.6_beta.1-24-x86_64.pkg.tar.zst",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/hoddmimis-0.2.6_beta.1-24-x86_64.pkg.tar.zst",
-        "bytes": 41952300,
-        "sha256": "f62ea057436ade8b9257d40b6d883c48a64b50aea0f8093b43d4606197fe7d52"
+        "file": "hoddmimis-0.2.7_beta.1-25-x86_64.pkg.tar.zst",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis-0.2.7_beta.1-25-x86_64.pkg.tar.zst",
+        "bytes": 41949173,
+        "sha256": "b7647bfb5fc0bcabcbf93d6f34456a8bfa2a3b876f0ce3be1a525e34d84b3928"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "rpm",
         "variant": "tui",
-        "file": "hoddmimis-tui-0.2.6-beta.1-24.x86_64.rpm",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/hoddmimis-tui-0.2.6-beta.1-24.x86_64.rpm",
-        "bytes": 1574599,
-        "sha256": "2c6df5a8b3bea5c151875d67a4c14ffc1758ace331668078faa0e69888959b0b"
+        "file": "hoddmimis-tui-0.2.7-beta.1-25.x86_64.rpm",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis-tui-0.2.7-beta.1-25.x86_64.rpm",
+        "bytes": 1574673,
+        "sha256": "4788ef365ca5b4bebfdd5532484f9e7c6781e273e941368463c518f480142183"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "pkg.tar.zst",
         "variant": "tui",
-        "file": "hoddmimis-tui-0.2.6_beta.1-24-x86_64.pkg.tar.zst",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/hoddmimis-tui-0.2.6_beta.1-24-x86_64.pkg.tar.zst",
-        "bytes": 1458280,
-        "sha256": "f3b9459390f437533984e949f04f7aef4c624b99a2b15cd54264df09c95b34c3"
+        "file": "hoddmimis-tui-0.2.7_beta.1-25-x86_64.pkg.tar.zst",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis-tui-0.2.7_beta.1-25-x86_64.pkg.tar.zst",
+        "bytes": 1458347,
+        "sha256": "51bd06b607ec7305226b80d45c9e3c7c2b10a6a46607d314e3bbe173566b2b6a"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "deb",
         "variant": "tui",
-        "file": "hoddmimis-tui_0.2.6-beta.1-24_amd64.deb",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/hoddmimis-tui_0.2.6-beta.1-24_amd64.deb",
-        "bytes": 1080844,
-        "sha256": "2d9ca36842f84287b1a254ce1126df07a5766c488ceab802eb303e884b0fcef7"
+        "file": "hoddmimis-tui_0.2.7-beta.1-25_amd64.deb",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis-tui_0.2.7-beta.1-25_amd64.deb",
+        "bytes": 1080536,
+        "sha256": "c3804d79b3b125a8111ddb29b5f98be4195012877bdaf9fd8fdcc0e9cd588deb"
       },
       {
         "platform": "linux",
         "architecture": "x86_64",
         "format": "deb",
         "variant": "desktop",
-        "file": "hoddmimis_0.2.6-beta.1-24_amd64.deb",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.6-beta.1-24/hoddmimis_0.2.6-beta.1-24_amd64.deb",
-        "bytes": 29268068,
-        "sha256": "137ae9df22f7da7213e1b98cc1f7b4d74830af8b650f00d2bfe36220b0eee3d2"
+        "file": "hoddmimis_0.2.7-beta.1-25_amd64.deb",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis_0.2.7-beta.1-25_amd64.deb",
+        "bytes": 29265316,
+        "sha256": "a662fec98a0326ede75bc9bfb5b0aba6a5e752d63116d43adf7d3ed3f08636d1"
       }
     ],
     "notes": [
-      "Hoddmimis now shows per-process and subtree storage read/write activity on Linux, macOS, and Windows. New columns can be sorted and configured, and the Inspector includes current values and history. Processes the operating system will not expose are shown as unavailable instead of reporting a misleading zero.",
-      "The saved-filter button now keeps its full label, and the snapshot save icon is centered consistently with other icon-only actions."
+      "Process trees such as macOS `launchd` now show storage activity contributed by readable subprocesses. The root process still says unavailable for its own storage counters when macOS does not expose them.",
+      "The update refresh icon and the \"+ Filter\" toolbar content are centered.",
+      "Storage read and write history now share one graph, matching the network graph's paired layout."
     ]
   },
   "releases": [
+    {
+      "version": "0.2.7-beta.1",
+      "build": 25,
+      "tag": "v0.2.7-beta.1-25",
+      "channel": "beta",
+      "assets": [
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "AppImage",
+          "variant": "desktop",
+          "file": "Hoddmimis-0.2.7-beta.1-25-linux-x86_64.AppImage",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-0.2.7-beta.1-25-linux-x86_64.AppImage",
+          "bytes": 41425400,
+          "sha256": "4b97cd338a7688b8061bcf54482a7ac58ed34ef2a53ec496700bd6900c0a7e63"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "tar.gz",
+          "variant": "desktop",
+          "file": "Hoddmimis-0.2.7-beta.1-25-linux-x86_64.tar.gz",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-0.2.7-beta.1-25-linux-x86_64.tar.gz",
+          "bytes": 44104503,
+          "sha256": "aa694ee0b8c5d0f6d3eda46ef7ee8878ea6e1c0eba4fd0f1f4e886b58fb56792"
+        },
+        {
+          "platform": "macos",
+          "architecture": "arm64",
+          "format": "dmg",
+          "variant": "desktop",
+          "file": "Hoddmimis-0.2.7-beta.1-25-macos-arm64.dmg",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-0.2.7-beta.1-25-macos-arm64.dmg",
+          "bytes": 100672379,
+          "sha256": "fad586dd7deb306387de6b4ab369a40f6e29201a449b7396742beab39e8a91cc"
+        },
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "format": "msi",
+          "variant": "desktop",
+          "file": "Hoddmimis-0.2.7-beta.1-25-windows-x86_64.msi",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-0.2.7-beta.1-25-windows-x86_64.msi",
+          "bytes": 42632226,
+          "sha256": "2f6f2d698666d4c58c272446f45255c5f8dd7a6290f7681d2f17cd5bd1bcd1c5"
+        },
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "format": "zip",
+          "variant": "desktop",
+          "file": "Hoddmimis-0.2.7-beta.1-25-windows-x86_64.zip",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-0.2.7-beta.1-25-windows-x86_64.zip",
+          "bytes": 52226635,
+          "sha256": "9fd56e90491baebcc8cb56ed83c4646598a2e42782cbc9d8069c0ce755b22f9d"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "tar.gz",
+          "variant": "tui",
+          "file": "Hoddmimis-TUI-0.2.7-beta.1-25-linux-x86_64.tar.gz",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-TUI-0.2.7-beta.1-25-linux-x86_64.tar.gz",
+          "bytes": 1578424,
+          "sha256": "91410048998b0679748c9c6b9ee9bc2718e7c51c3cb857ec757109ad823c553e"
+        },
+        {
+          "platform": "macos",
+          "architecture": "arm64",
+          "format": "pkg",
+          "variant": "tui",
+          "file": "Hoddmimis-TUI-0.2.7-beta.1-25-macos-arm64.pkg",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-TUI-0.2.7-beta.1-25-macos-arm64.pkg",
+          "bytes": 2807300,
+          "sha256": "7900de6341342e22a2e606429f79667dac4a1b4dc812a3e6c15163bc58b74ca5"
+        },
+        {
+          "platform": "macos",
+          "architecture": "arm64",
+          "format": "zip",
+          "variant": "tui",
+          "file": "Hoddmimis-TUI-0.2.7-beta.1-25-macos-arm64.zip",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-TUI-0.2.7-beta.1-25-macos-arm64.zip",
+          "bytes": 2791205,
+          "sha256": "a636c57414a83a400337a329d1462f180483b9b0bb65aa8a9f9b6860c5523e7f"
+        },
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "format": "msi",
+          "variant": "tui",
+          "file": "Hoddmimis-TUI-0.2.7-beta.1-25-windows-x86_64.msi",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-TUI-0.2.7-beta.1-25-windows-x86_64.msi",
+          "bytes": 2781184,
+          "sha256": "ad9a24f28c89c613014518a472a74460d97325020be5a587cba3ddbac194f996"
+        },
+        {
+          "platform": "windows",
+          "architecture": "x86_64",
+          "format": "zip",
+          "variant": "tui",
+          "file": "Hoddmimis-TUI-0.2.7-beta.1-25-windows-x86_64.zip",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/Hoddmimis-TUI-0.2.7-beta.1-25-windows-x86_64.zip",
+          "bytes": 3424491,
+          "sha256": "fb0673b702bc3f73686a24c9f8e58fe4795e1843f4adf46042839a352bbbef66"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "rpm",
+          "variant": "desktop",
+          "file": "hoddmimis-0.2.7-beta.1-25.x86_64.rpm",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis-0.2.7-beta.1-25.x86_64.rpm",
+          "bytes": 44300635,
+          "sha256": "ec0e7e90edfa493981528979875963ee3e2d62e6f983303afdd11c390ca2753e"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "pkg.tar.zst",
+          "variant": "desktop",
+          "file": "hoddmimis-0.2.7_beta.1-25-x86_64.pkg.tar.zst",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis-0.2.7_beta.1-25-x86_64.pkg.tar.zst",
+          "bytes": 41949173,
+          "sha256": "b7647bfb5fc0bcabcbf93d6f34456a8bfa2a3b876f0ce3be1a525e34d84b3928"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "rpm",
+          "variant": "tui",
+          "file": "hoddmimis-tui-0.2.7-beta.1-25.x86_64.rpm",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis-tui-0.2.7-beta.1-25.x86_64.rpm",
+          "bytes": 1574673,
+          "sha256": "4788ef365ca5b4bebfdd5532484f9e7c6781e273e941368463c518f480142183"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "pkg.tar.zst",
+          "variant": "tui",
+          "file": "hoddmimis-tui-0.2.7_beta.1-25-x86_64.pkg.tar.zst",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis-tui-0.2.7_beta.1-25-x86_64.pkg.tar.zst",
+          "bytes": 1458347,
+          "sha256": "51bd06b607ec7305226b80d45c9e3c7c2b10a6a46607d314e3bbe173566b2b6a"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "deb",
+          "variant": "tui",
+          "file": "hoddmimis-tui_0.2.7-beta.1-25_amd64.deb",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis-tui_0.2.7-beta.1-25_amd64.deb",
+          "bytes": 1080536,
+          "sha256": "c3804d79b3b125a8111ddb29b5f98be4195012877bdaf9fd8fdcc0e9cd588deb"
+        },
+        {
+          "platform": "linux",
+          "architecture": "x86_64",
+          "format": "deb",
+          "variant": "desktop",
+          "file": "hoddmimis_0.2.7-beta.1-25_amd64.deb",
+          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.7-beta.1-25/hoddmimis_0.2.7-beta.1-25_amd64.deb",
+          "bytes": 29265316,
+          "sha256": "a662fec98a0326ede75bc9bfb5b0aba6a5e752d63116d43adf7d3ed3f08636d1"
+        }
+      ],
+      "notes": [
+        "Process trees such as macOS `launchd` now show storage activity contributed by readable subprocesses. The root process still says unavailable for its own storage counters when macOS does not expose them.",
+        "The update refresh icon and the \"+ Filter\" toolbar content are centered.",
+        "Storage read and write history now share one graph, matching the network graph's paired layout."
+      ]
+    },
     {
       "version": "0.2.6-beta.1",
       "build": 24,
@@ -857,179 +1031,6 @@
       ],
       "notes": [
         "Dialogs now have consistent shadows, and their action labels no longer get cut off. On macOS, pointing at the process tree pauses live reordering even while the Hoddmimis window is inactive."
-      ]
-    },
-    {
-      "version": "0.2.5-beta.3",
-      "build": 20,
-      "tag": "v0.2.5-beta.3-20",
-      "channel": "beta",
-      "assets": [
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "AppImage",
-          "variant": "desktop",
-          "file": "Hoddmimis-0.2.5-beta.3-20-linux-x86_64.AppImage",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/Hoddmimis-0.2.5-beta.3-20-linux-x86_64.AppImage",
-          "bytes": 41150968,
-          "sha256": "a2287ebaefd40f0c2b53416cefc1fd551072a4276bcc53fcbe3a3cb313bf7a24"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "tar.gz",
-          "variant": "desktop",
-          "file": "Hoddmimis-0.2.5-beta.3-20-linux-x86_64.tar.gz",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/Hoddmimis-0.2.5-beta.3-20-linux-x86_64.tar.gz",
-          "bytes": 43823045,
-          "sha256": "54fc555b35e93948711465a7e943036d8f5e3f42306b3eed5e6a7618a1110c1e"
-        },
-        {
-          "platform": "macos",
-          "architecture": "arm64",
-          "format": "dmg",
-          "variant": "desktop",
-          "file": "Hoddmimis-0.2.5-beta.3-20-macos-arm64.dmg",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/Hoddmimis-0.2.5-beta.3-20-macos-arm64.dmg",
-          "bytes": 100670757,
-          "sha256": "18722d764615e3eecc477b527c4c2ec621a4033e565b022ad6a996b2f9be944f"
-        },
-        {
-          "platform": "windows",
-          "architecture": "x86_64",
-          "format": "msi",
-          "variant": "desktop",
-          "file": "Hoddmimis-0.2.5-beta.3-20-windows-x86_64.msi",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/Hoddmimis-0.2.5-beta.3-20-windows-x86_64.msi",
-          "bytes": 42619938,
-          "sha256": "f7c0d896ca2bca0fe88582be6b59ce5cec83afd62d97d49bbd934cf03850b45c"
-        },
-        {
-          "platform": "windows",
-          "architecture": "x86_64",
-          "format": "zip",
-          "variant": "desktop",
-          "file": "Hoddmimis-0.2.5-beta.3-20-windows-x86_64.zip",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/Hoddmimis-0.2.5-beta.3-20-windows-x86_64.zip",
-          "bytes": 52211872,
-          "sha256": "68378fd058f1c1e115671796dfa53daf00d2c4aad62fadb6c17767f8c48c96e0"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "tar.gz",
-          "variant": "tui",
-          "file": "Hoddmimis-TUI-0.2.5-beta.3-20-linux-x86_64.tar.gz",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/Hoddmimis-TUI-0.2.5-beta.3-20-linux-x86_64.tar.gz",
-          "bytes": 1575291,
-          "sha256": "1fc4400126b016ffc669831a983aef643115a6e6ad92a1931c67761fea47bd4c"
-        },
-        {
-          "platform": "macos",
-          "architecture": "arm64",
-          "format": "pkg",
-          "variant": "tui",
-          "file": "Hoddmimis-TUI-0.2.5-beta.3-20-macos-arm64.pkg",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/Hoddmimis-TUI-0.2.5-beta.3-20-macos-arm64.pkg",
-          "bytes": 2800843,
-          "sha256": "6320fe0dd7fb45c6f98123a4d0de2136983f5be76d85c53a74eef3bfd86bd012"
-        },
-        {
-          "platform": "macos",
-          "architecture": "arm64",
-          "format": "zip",
-          "variant": "tui",
-          "file": "Hoddmimis-TUI-0.2.5-beta.3-20-macos-arm64.zip",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/Hoddmimis-TUI-0.2.5-beta.3-20-macos-arm64.zip",
-          "bytes": 2784600,
-          "sha256": "e9691024613cf7699d0578a0a807a751dc313bf0cb24596eba389a57df4bd23e"
-        },
-        {
-          "platform": "windows",
-          "architecture": "x86_64",
-          "format": "msi",
-          "variant": "tui",
-          "file": "Hoddmimis-TUI-0.2.5-beta.3-20-windows-x86_64.msi",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/Hoddmimis-TUI-0.2.5-beta.3-20-windows-x86_64.msi",
-          "bytes": 2777088,
-          "sha256": "4d4f340388a592ae6f28496422a53a4602aa072589b3a5ac4e87de7ef927fd36"
-        },
-        {
-          "platform": "windows",
-          "architecture": "x86_64",
-          "format": "zip",
-          "variant": "tui",
-          "file": "Hoddmimis-TUI-0.2.5-beta.3-20-windows-x86_64.zip",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/Hoddmimis-TUI-0.2.5-beta.3-20-windows-x86_64.zip",
-          "bytes": 3418227,
-          "sha256": "1659b67d40b93d912ca16129d32bb4d6a2ac70d128787963f4da1de97e3346f2"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "rpm",
-          "variant": "desktop",
-          "file": "hoddmimis-0.2.5-beta.3-20.x86_64.rpm",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/hoddmimis-0.2.5-beta.3-20.x86_64.rpm",
-          "bytes": 44015686,
-          "sha256": "07fe42d0f571ffb3264e9a3b719b5ea4e0270edafd5f96ed29f773d44e60b5f1"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "pkg.tar.zst",
-          "variant": "desktop",
-          "file": "hoddmimis-0.2.5_beta.3-20-x86_64.pkg.tar.zst",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/hoddmimis-0.2.5_beta.3-20-x86_64.pkg.tar.zst",
-          "bytes": 41671171,
-          "sha256": "f986be4eacec6e0a21831cfdc6536be01ad641be140739271436136e3c953863"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "rpm",
-          "variant": "tui",
-          "file": "hoddmimis-tui-0.2.5-beta.3-20.x86_64.rpm",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/hoddmimis-tui-0.2.5-beta.3-20.x86_64.rpm",
-          "bytes": 1570802,
-          "sha256": "de9ae940935e826caaf24a4321abb4e2d256a7c8dd1fd9878b372affab9350e8"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "pkg.tar.zst",
-          "variant": "tui",
-          "file": "hoddmimis-tui-0.2.5_beta.3-20-x86_64.pkg.tar.zst",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/hoddmimis-tui-0.2.5_beta.3-20-x86_64.pkg.tar.zst",
-          "bytes": 1454758,
-          "sha256": "97005dd8d7dd1da9428dc6c872a6587195f5388e012327b79a2f733a351ab769"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "deb",
-          "variant": "tui",
-          "file": "hoddmimis-tui_0.2.5-beta.3-20_amd64.deb",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/hoddmimis-tui_0.2.5-beta.3-20_amd64.deb",
-          "bytes": 1077336,
-          "sha256": "c84cb49dc27d9aef39e970f86ac6c2575d8496b62bc8b24fc3b14aa7bf28ea61"
-        },
-        {
-          "platform": "linux",
-          "architecture": "x86_64",
-          "format": "deb",
-          "variant": "desktop",
-          "file": "hoddmimis_0.2.5-beta.3-20_amd64.deb",
-          "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.5-beta.3-20/hoddmimis_0.2.5-beta.3-20_amd64.deb",
-          "bytes": 29029908,
-          "sha256": "dd6b3479c28b356c7e824559e7e3f1e4c2d2f0305b2ce9213a73ca048c49ffb8"
-        }
-      ],
-      "notes": [
-        "Keep family-wide Linux downloads while enforcing a reviewed dependency contract for every bundled ELF object. Ship only Qt, ICU 72 and JPEG ABI 62 privately; use package-managed host graphics and system libraries.",
-        "Generate DEB host dependencies and verify all RPM ELF requirements. Test installed packages with Wayland and X11 OpenGL on updated Debian 12/13, Ubuntu 24.04/26.04, Fedora 43/44 and current Arch before release.",
-        "Fix the Fedora Wayland startup crash introduced in build 19. Bundled older C++ and Wayland libraries prevented Fedora's Mesa driver from loading. Linux packages now use the host copies and remain compatible with Debian 12."
       ]
     }
   ]
