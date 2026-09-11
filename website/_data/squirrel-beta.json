@@ -1,15 +1,15 @@
 {
-  "currentRelease": "27",
+  "currentRelease": "28",
   "releases": [
     {
-      "version": "27",
+      "version": "28",
       "updateTo": {
-        "version": "0.2.8-beta.1",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.8-beta.1-27/Hoddmimis-0.2.8-beta.1-27-macos-arm64.zip",
-        "name": "Hoddmimis 0.2.8-beta.1 (build 27)",
-        "notes": "Update checks now show a persistent result with the installed and available version, build, and selected channel. Linux and Windows keep downloads as an explicit action that opens the official Hoddmimis downloads page.\nOn macOS, a manual check can securely download a signed update with Squirrel.Mac and offer to install it by relaunching Hoddmimis. Stable remains the default; Beta is opt-in, and switching back to Stable never downgrades an installed build.\nExisting builds that reject newer MSI or PKG entries in the signed release feed may need one manual download before they receive the repaired update behavior.",
-        "sha256": "82fc2fb53370a94a2cf1d2bdfa906db14096bee71e559834135262ca09556021",
-        "size": 58317980
+        "version": "0.2.9-beta.1",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.9-beta.1-28/Hoddmimis-0.2.9-beta.1-28-macos-arm64.zip",
+        "name": "Hoddmimis 0.2.9-beta.1 (build 28)",
+        "notes": "Linux update checks now use the signed release feed in every build. Dialogs stay within the application window, including on short or scaled displays.",
+        "sha256": "9022118147c3c9bbe434cd122b6b579aebd710f02cd05d2f32036f0e1134fca9",
+        "size": 58317283
       }
     }
   ]
