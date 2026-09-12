@@ -1,15 +1,15 @@
 {
-  "currentRelease": "28",
+  "currentRelease": "29",
   "releases": [
     {
-      "version": "28",
+      "version": "29",
       "updateTo": {
-        "version": "0.2.9-beta.1",
-        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.9-beta.1-28/Hoddmimis-0.2.9-beta.1-28-macos-arm64.zip",
-        "name": "Hoddmimis 0.2.9-beta.1 (build 28)",
-        "notes": "Linux update checks now use the signed release feed in every build. Dialogs stay within the application window, including on short or scaled displays.",
-        "sha256": "9022118147c3c9bbe434cd122b6b579aebd710f02cd05d2f32036f0e1134fca9",
-        "size": 58317283
+        "version": "0.2.10-beta.1",
+        "url": "https://github.com/devmil/Hoddmimis/releases/download/v0.2.10-beta.1-29/Hoddmimis-0.2.10-beta.1-29-macos-arm64.zip",
+        "name": "Hoddmimis 0.2.10-beta.1 (build 29)",
+        "notes": "Privacy mode now hides loaded Inspector file paths, network endpoints, and private security metadata in both the desktop app and TUI.\nImporting or deleting a snapshot no longer leaves the TUI stuck on the wrong data source. Settings saves now run outside the UI thread, and shutdown cancels a pending Linux network-service recovery request.",
+        "sha256": "b1b5de76be2c633e4f1dd237b9559825384fb7cf029ec4bcbc250612d917b2ea",
+        "size": 58337516
       }
     }
   ]
